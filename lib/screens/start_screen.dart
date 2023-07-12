@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:movieflix/screens/years.dart';
 
 class StartScreen extends StatelessWidget {
   const StartScreen({super.key, required this.onContinue});
@@ -8,7 +9,7 @@ class StartScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color.fromARGB(255, 63, 10, 225),
+      backgroundColor: Color.fromARGB(69, 17, 4, 53),
       body: SafeArea(
         child: Center(
           child: Column(
@@ -32,11 +33,17 @@ class StartScreen extends StatelessWidget {
                   color: Colors.white,
                 ),
               ),
-              const SizedBox(height: 40),
               ElevatedButton(
-                onPressed: onContinue,
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (ctx) => const YearScreen(),
+                    ),
+                  );
+                },
                 style: ElevatedButton.styleFrom(
-                  backgroundColor: const Color.fromARGB(255, 77, 31, 213),
+                  backgroundColor: Color.fromARGB(169, 9, 3, 29),
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(30),
                   ),
