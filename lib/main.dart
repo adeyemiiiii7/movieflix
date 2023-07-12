@@ -22,16 +22,17 @@ class App extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      theme: theme,
-      home: StartScreen(onContinue: () {
-        Navigator.push(
-          context,
-          MaterialPageRoute(
-            builder: (ctx) => const YearScreen(),
-          ),
+        debugShowCheckedModeBanner: false,
+        theme: theme,
+        home: const YearScreen()
+        // StartScreen(onContinue: () {
+        //   Navigator.push(
+        //     context,
+        //     MaterialPageRoute(
+        //       builder: (ctx) => const YearScreen(),
+        //     ),
+        //   );
+        // }),
         );
-      }),
-    );
   }
 }
