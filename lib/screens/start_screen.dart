@@ -7,54 +7,57 @@ class StartScreen extends StatelessWidget {
   final VoidCallback onContinue;
   @override
   Widget build(BuildContext context) {
-    return Center(
-      child: Column(mainAxisSize: MainAxisSize.min, children: [
-        Opacity(
-          opacity: 0.1,
-          child: Image.asset(
-            'assets/images/movieflix-logo.png',
-            width: 300,
-          ),
-        ),
-        const SizedBox(height: 80),
-        Text(
-          "Moviefilx",
-          style: GoogleFonts.poppins(
-            fontSize: 30,
-            fontWeight: FontWeight.bold,
-            color: Colors.white,
-          ),
-        ),
-        const Text.rich(
-          TextSpan(
-            text: 'Discover the Blockbusters: ',
-            style: TextStyle(
-              fontSize: 15,
-              fontWeight: FontWeight.bold,
-              color: Colors.white,
-            ),
+    return Scaffold(
+      backgroundColor: Color.fromARGB(255, 63, 10, 225),
+      body: SafeArea(
+        child: Center(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              TextSpan(
-                text: 'Unveiling the Greatest Movies of the 2010s',
-                style: TextStyle(
-                  fontStyle: FontStyle.italic,
+              Text(
+                'Moviefilx',
+                style: GoogleFonts.poppins(
+                  fontSize: 40,
+                  fontWeight: FontWeight.bold,
+                  color: Colors.white,
+                ),
+              ),
+              const SizedBox(height: 20),
+              Text(
+                'Discover the Blockbusters: Unveiling the Greatest Movies of the 2010s',
+                textAlign: TextAlign.center,
+                style: GoogleFonts.poppins(
+                  fontSize: 18,
+                  fontWeight: FontWeight.bold,
+                  color: Colors.white,
+                ),
+              ),
+              const SizedBox(height: 40),
+              ElevatedButton(
+                onPressed: onContinue,
+                style: ElevatedButton.styleFrom(
+                  backgroundColor: const Color.fromARGB(255, 77, 31, 213),
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(30),
+                  ),
+                  padding: const EdgeInsets.symmetric(
+                    vertical: 15,
+                    horizontal: 40,
+                  ),
+                ),
+                child: const Text(
+                  'Continue',
+                  style: TextStyle(
+                    fontSize: 18,
+                    fontWeight: FontWeight.bold,
+                    color: Colors.white,
+                  ),
                 ),
               ),
             ],
           ),
         ),
-        OutlinedButton.icon(
-          onPressed: onContinue,
-          style: OutlinedButton.styleFrom(
-            foregroundColor: Colors.white,
-            shape: RoundedRectangleBorder(
-              borderRadius: BorderRadius.circular(30),
-            ),
-          ),
-          icon: const Icon(Icons.arrow_forward_sharp),
-          label: const Text('Continue'),
-        ),
-      ]),
+      ),
     );
   }
 }
