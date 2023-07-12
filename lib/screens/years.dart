@@ -14,14 +14,14 @@ class _YearScreenState extends State<YearScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Pick Year'),
+        title: const Text('Pick A Year'),
       ),
       body: GridView(
         gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
           crossAxisCount: 2,
           childAspectRatio: 3 / 2,
-          crossAxisSpacing: 20,
-          mainAxisSpacing: 20,
+          crossAxisSpacing: 15,
+          mainAxisSpacing: 15,
         ),
         children: [for (final year in avaliableYears) YearGridItem(year: year)],
       ),
