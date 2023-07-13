@@ -34,7 +34,7 @@ class _MoviePlayerState extends State<MoviePlayer> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Movie Player'),
+        title: const Text('Trailer'),
       ),
       body: Center(
         child: _controller.value.isInitialized
@@ -42,7 +42,7 @@ class _MoviePlayerState extends State<MoviePlayer> {
                 aspectRatio: _controller.value.aspectRatio,
                 child: VideoPlayer(_controller),
               )
-            : CircularProgressIndicator(),
+            : const CircularProgressIndicator(),
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: () {
