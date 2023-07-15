@@ -12,7 +12,7 @@ const avaliableYears = [
   Year(
     id: 'c2',
     title: "2011",
-    color: Colors.red,
+    color: Colors.purpleAccent,
   ),
   Year(
     id: 'c3',
@@ -84,7 +84,7 @@ const dummyData = [
     title: 'Inception',
     genre: Genre.action, // Genre.adventure,
     duration: 148,
-    restriction: Restriction.ParentalGuidance,
+    restriction: Restriction.ParentalGuidance13,
     imageUrl:
         'https://www.imdb.com/title/tt1375666/mediaviewer/rm3426651392/?ref_=tt_ov_i',
     rating: 88,
@@ -141,7 +141,7 @@ const dummyData = [
     title: 'How to Train Your Dragon',
     genre: Genre.adventure, // Genre.adventure,
     duration: 98,
-    restriction: Restriction.ParentalGuidance,
+    restriction: Restriction.ParentalGuidance13,
     imageUrl:
         'https://www.imdb.com/title/tt1285016/mediaviewer/rm880244480/?ref_=tt_ov_i',
     rating: 81,
@@ -217,7 +217,7 @@ const dummyData = [
     title: 'The Tree of Life',
     genre: Genre.drama, // Genre.adventure,
     duration: 139,
-    restriction: Restriction.ParentalGuidance,
+    restriction: Restriction.ParentalGuidance13,
     imageUrl:
         'https://www.imdb.com/title/tt0478304/mediaviewer/rm4192437504/?ref_=tt_ov_i',
     rating: 81,
@@ -237,7 +237,7 @@ const dummyData = [
     title: 'A Seperation',
     genre: Genre.drama, // Genre.adventure,
     duration: 123,
-    restriction: Restriction.ParentalGuidance,
+    restriction: Restriction.ParentalGuidance13,
     imageUrl:
         'https://www.imdb.com/title/tt0478304/mediaviewer/rm4192437504/?ref_=tt_ov_i',
     rating: 83,
@@ -257,7 +257,7 @@ const dummyData = [
     title: 'In Time',
     genre: Genre.thriller, // Genre.adventure,
     duration: 109,
-    restriction: Restriction.ParentalGuidance,
+    restriction: Restriction.ParentalGuidance13,
     imageUrl:
         'https://www.imdb.com/video/vi775265305/?playlistId=tt1637688&ref_=tt_pr_ov_vi',
     rating: 67,
@@ -277,7 +277,7 @@ const dummyData = [
     title: 'Ku FU Panda 2',
     genre: Genre.animation, // Genre.adventure,
     duration: 90,
-    restriction: Restriction.ParentalGuidance,
+    restriction: Restriction.ParentalGuidance13,
     imageUrl: 'https://www.imdb.com/title/tt1302011/?ref_=ttls_li_i',
     rating: 67,
     video:
@@ -334,7 +334,7 @@ const dummyData = [
     title: 'The Dark Knight Rises',
     genre: Genre.action, // Genre.adventure,
     duration: 164,
-    restriction: Restriction.ParentalGuidance,
+    restriction: Restriction.ParentalGuidance13,
     imageUrl:
         'https://www.imdb.com/title/tt1345836/mediaviewer/rm834516224/?ref_=tt_ov_i',
     rating: 84,
@@ -354,7 +354,7 @@ const dummyData = [
     title: 'Skydall',
     genre: Genre.action, // Genre.adventure,
     duration: 143,
-    restriction: Restriction.ParentalGuidance,
+    restriction: Restriction.ParentalGuidance13,
     imageUrl:
         'https://m.media-amazon.com/images/M/MV5BMWZiNjE2OWItMTkwNy00ZWQzLWI0NTgtMWE0NjNiYTljN2Q1XkEyXkFqcGdeQXVyNzAwMjYxMzA@._V1_UY209_CR0,0,140,209_AL_.jpg',
     rating: 78,
@@ -481,6 +481,206 @@ const dummyData = [
     video:
         'https://www.imdb.com/video/vi1306504217/?playlistId=tt1065073&ref_=tt_ov_vi',
     about: "The life of Mason, from early childhood to his arrival at college.",
+    isHollywood: true,
+    isWorldwide: true,
+    isNollywood: false,
+  ),
+  Movie(
+    id: 'm22',
+    year: [
+      'c5',
+    ],
+    title: 'Mission: Impossible - Rogue Nation',
+    genre: Genre.action, // Genre.adventure,
+    duration: 131,
+    restriction: Restriction.ParentalGuidance13,
+    imageUrl:
+        'https://www.imdb.com/title/tt1065073/mediaviewer/rm4108897280/?ref_=tt_ov_i',
+    rating: 74,
+    video:
+        'https://www.imdb.com/video/vi1306504217/?playlistId=tt1065073&ref_=tt_ov_vi',
+    about:
+        "Ethan and his team take on their most impossible mission yet when they have to eradicate an international rogue organization as highly skilled as they are and committed to destroying the IMF.",
+    isHollywood: true,
+    isWorldwide: true,
+    isNollywood: false,
+  ),
+  Movie(
+    id: 'm23',
+    year: [
+      'c5',
+    ],
+    title: 'Inside Out',
+    genre: Genre.animation, // Genre.adventure,
+    duration: 95,
+    restriction: Restriction.ParentalGuidance13,
+    imageUrl:
+        'https://www.imdb.com/title/tt2096673/mediaviewer/rm3662344960/?ref_=tt_ov_i',
+    rating: 81,
+    video:
+        'https://www.imdb.com/video/vi203730969/?playlistId=tt2096673&ref_=tt_ov_vi',
+    about:
+        "After young Riley is uprooted from her Midwest life and moved to San Francisco, her emotions - Joy, Fear, Anger, Disgust and Sadness - conflict on how best to navigate a new city, house, and school.",
+    isHollywood: true,
+    isWorldwide: true,
+    isNollywood: false,
+  ),
+  Movie(
+    id: 'm24',
+    year: [
+      'c5',
+    ],
+    title: 'Inside Out',
+    genre: Genre.action, // Genre.adventure,
+    duration: 77,
+    restriction: Restriction.Guidance,
+    imageUrl:
+        'https://m.media-amazon.com/images/M/MV5BYTM3ZTllNzItNTNmOS00NzJiLTg1MWMtMjMxNDc0NmJhODU5XkEyXkFqcGdeQXVyODE5NzE3OTE@._V1_UX140_CR0,0,140,209_AL_.jpg',
+    rating: 77,
+    video:
+        'https://www.imdb.com/video/vi1901244185/?playlistId=tt2802144&ref_=tt_ov_vi',
+    about:
+        "After young Riley is uprooted from her Midwest life and moved to San Francisco, her emotions - Joy, Fear, Anger, Disgust and Sadness - conflict on how best to navigate a new city, house, and school.",
+    isHollywood: true,
+    isWorldwide: true,
+    isNollywood: false,
+  ),
+  Movie(
+    id: 'm25',
+    year: [
+      'c5',
+    ],
+    title: 'Avengers: Age of Ultron',
+    genre: Genre.action, // Genre.adventure,
+    duration: 73,
+    restriction: Restriction.ParentalGuidance13,
+    imageUrl:
+        'https://www.imdb.com/title/tt2395427/mediaviewer/rm4050576640/?ref_=tt_ov_i',
+    rating: 77,
+    video:
+        'https://www.imdb.com/video/vi2821566745/?playlistId=tt2395427&ref_=tt_ov_vi',
+    about:
+        "When Tony Stark and Bruce Banner try to jump-start a dormant peacekeeping program called Ultron, things go horribly wrong and it's up to Earth's mightiest heroes to stop the villainous Ultron from enacting his terrible plan.",
+    isHollywood: true,
+    isWorldwide: true,
+    isNollywood: false,
+  ),
+  Movie(
+    id: 'm26',
+    year: [
+      'c6',
+    ],
+    title: 'Moonlight',
+    genre: Genre.drama, // Genre.adventure,
+    duration: 125,
+    restriction: Restriction.NC18,
+    imageUrl:
+        'https://www.imdb.com/title/tt2395427/mediaviewer/rm4050576640/?ref_=tt_ov_i',
+    rating: 74,
+    video:
+        'https://www.imdb.com/video/vi2821566745/?playlistId=tt2395427&ref_=tt_ov_vi',
+    about:
+        "A young African-American man grapples with his identity and sexuality while experiencing the everyday struggles of childhood, adolescence, and burgeoning adulthood.",
+    isHollywood: true,
+    isWorldwide: true,
+    isNollywood: false,
+  ),
+  Movie(
+    id: 'm27',
+    year: [
+      'c6',
+    ],
+    title: 'Captain America: Civil War',
+    genre: Genre.action, // Genre.adventure,
+    duration: 147,
+    restriction: Restriction.ParentalGuidance13,
+    imageUrl:
+        'https://www.imdb.com/title/tt3498820/mediaviewer/rm3218348288/?ref_=tt_ov_i',
+    rating: 74,
+    video:
+        'https://www.imdb.com/video/vi174044441/?playlistId=tt3498820&ref_=tt_pr_ov_vi',
+    about:
+        "Political involvement in the Avengers' affairs causes a rift between Captain America and Iron Man.",
+    isHollywood: true,
+    isWorldwide: true,
+    isNollywood: false,
+  ),
+  Movie(
+    id: 'm28',
+    year: [
+      'c7',
+    ],
+    title: 'Blade Runner 2049',
+    genre: Genre.action, // Genre.adventure,
+    duration: 147,
+    restriction: Restriction.Guidance,
+    imageUrl:
+        'https://www.imdb.com/title/tt1856101/mediaviewer/rm2677875712/?ref_=tt_ov_i',
+    rating: 74,
+    video:
+        'https://www.imdb.com/video/vi3362371865/?playlistId=tt1856101&ref_=tt_ov_vi',
+    about:
+        "Young Blade Runner K's discovery of a long-buried secret leads him to track down former Blade Runner Rick Deckard, who's been missing for thirty years.",
+    isHollywood: true,
+    isWorldwide: true,
+    isNollywood: false,
+  ),
+  Movie(
+    id: 'm29',
+    year: [
+      'c7',
+    ],
+    title: 'Lady Bird',
+    genre: Genre.drama, // Genre.adventure,
+    duration: 94,
+    restriction: Restriction.Guidance,
+    imageUrl:
+        'https://www.imdb.com/title/tt4925292/mediaviewer/rm98587392/?ref_=tt_ov_i',
+    rating: 74,
+    video:
+        'https://www.imdb.com/video/vi317437977/?playlistId=tt4925292&ref_=tt_ov_vi',
+    about:
+        "In 2002, an artistically inclined 17-year-old girl comes of age in Sacramento, California.",
+    isHollywood: true,
+    isWorldwide: true,
+    isNollywood: false,
+  ),
+  Movie(
+    id: 'm30',
+    year: [
+      'c8',
+    ],
+    title: 'Black Panther',
+    genre: Genre.action, // Genre.adventure,
+    duration: 124,
+    restriction: Restriction.Guidance,
+    imageUrl:
+        'https://www.imdb.com/title/tt1825683/mediaviewer/rm172972800/?ref_=tt_ov_i',
+    rating: 74,
+    video:
+        'https://www.imdb.com/video/vi2320939289/?playlistId=tt1825683&ref_=tt_ov_vi',
+    about:
+        "T'Challa, heir to the hidden but advanced kingdom of Wakanda, must step forward to lead his people into a new future and must confront a challenger from his country's past.",
+    isHollywood: true,
+    isWorldwide: true,
+    isNollywood: false,
+  ),
+  Movie(
+    id: 'm31',
+    year: [
+      'c8',
+    ],
+    title: 'Spider-Man: Into the Spider-Verse',
+    genre: Genre.action, // Genre.adventure,
+    duration: 124,
+    restriction: Restriction.Guidance,
+    imageUrl:
+        'https://www.imdb.com/title/tt4633694/mediaviewer/rm173371392/?ref_=tt_ov_i',
+    rating: 74,
+    video:
+        'https://www.imdb.com/video/vi1489877529/?playlistId=tt4633694&ref_=tt_ov_vi',
+    about:
+        "Teen Miles Morales becomes the Spider-Man of his universe and must join with five spider-powered individuals from other dimensions to stop a threat for all realities.",
     isHollywood: true,
     isWorldwide: true,
     isNollywood: false,
