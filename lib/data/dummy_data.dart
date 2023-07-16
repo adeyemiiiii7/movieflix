@@ -685,4 +685,64 @@ const dummyData = [
     isWorldwide: true,
     isNollywood: false,
   ),
+  Movie(
+    id: 'm32',
+    year: [
+      'c9',
+    ],
+    title: 'John Wick: Chapter 3 - Parabellum',
+    genre: Genre.drama, // Genre.adventure,
+    duration: 130,
+    restriction: Restriction.NC18,
+    imageUrl:
+        'https://www.imdb.com/title/tt6146586/mediaviewer/rm2374853376/?ref_=tt_ov_i',
+    rating: 74,
+    video:
+        'https://www.imdb.com/video/vi3203841305/?playlistId=tt6146586&ref_=tt_ov_vi',
+    about:
+        "John Wick is on the run after killing a member of the international assassins' guild, and with a fourteen million price tag on his head, he is the target of hit men and women everywhere.",
+    isHollywood: true,
+    isWorldwide: true,
+    isNollywood: false,
+  ),
+  Movie(
+    id: 'm33',
+    year: [
+      'c9',
+    ],
+    title: 'Knives Out',
+    genre: Genre.drama, // Genre.adventure,
+    duration: 130,
+    restriction: Restriction.ParentalGuidance13,
+    imageUrl:
+        'https://www.imdb.com/title/tt8946378/mediaviewer/rm2569376769/?ref_=tt_ov_i',
+    rating: 74,
+    video:
+        'https://www.imdb.com/video/vi2464857881/?playlistId=tt8946378&ref_=tt_ov_vi',
+    about:
+        "A detective investigates the death of the patriarch of an eccentric, combative family.",
+    isHollywood: true,
+    isWorldwide: true,
+    isNollywood: false,
+  ),
+  Movie(
+    id: 'm34',
+    year: [
+      'c9',
+    ],
+    title: 'Avengers: Endgame',
+    genre: Genre.action, // Genre.adventure,
+    duration: 181,
+    restriction: Restriction.ParentalGuidance13,
+    imageUrl:
+        'https://www.imdb.com/title/tt4154796/mediaviewer/rm2775147008/?ref_=tt_ov_i',
+    rating: 74,
+    video:
+        'https://www.imdb.com/video/vi2163260441/?playlistId=tt4154796&ref_=tt_ov_vi',
+    about:
+        "After the devastating events of Avengers: Infinity War (2018), the universe is in ruins. With the help of remaining allies, the Avengers assemble once more in order to reverse Thanos' actions and restore balance to the universe.",
+    isHollywood: true,
+    isWorldwide: true,
+    isNollywood: false,
+  ),
 ];
