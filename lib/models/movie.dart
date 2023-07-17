@@ -16,7 +16,7 @@ enum Genre {
 enum Restriction {
   Guidance,
   GeneralAudience,
-  ParentalGuidance,
+  ParentalGuidance13,
   NC18,
 }
 

@@ -43,7 +43,7 @@ class StartScreen extends StatelessWidget {
                   );
                 },
                 style: ElevatedButton.styleFrom(
-                  backgroundColor: Color.fromARGB(169, 9, 3, 29),
+                  backgroundColor: const Color.fromARGB(169, 14, 9, 30),
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(30),
                   ),
