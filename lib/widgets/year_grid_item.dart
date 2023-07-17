@@ -5,14 +5,16 @@ class YearGridItem extends StatelessWidget {
   const YearGridItem({
     super.key,
     required this.year,
+    required this.onSelectYear,
   });
 
   final Year year;
+  final void Function() onSelectYear;
 
   @override
   Widget build(BuildContext context) {
     return InkWell(
-      onTap: () {},
+      onTap: onSelectYear,
       splashColor: Theme.of(context).primaryColor,
       borderRadius: BorderRadius.circular(16),
       child: Container(

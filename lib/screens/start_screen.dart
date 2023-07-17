@@ -9,7 +9,7 @@ class StartScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color.fromARGB(69, 17, 4, 53),
+      backgroundColor: const Color.fromARGB(103, 87, 72, 72),
       body: SafeArea(
         child: Center(
           child: Column(
@@ -43,7 +43,7 @@ class StartScreen extends StatelessWidget {
                   );
                 },
                 style: ElevatedButton.styleFrom(
-                  backgroundColor: const Color.fromARGB(169, 14, 9, 30),
+                  backgroundColor: const Color.fromARGB(103, 87, 72, 72),
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(30),
                   ),

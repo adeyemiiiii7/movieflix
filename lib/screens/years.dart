@@ -1,15 +1,17 @@
 import 'package:flutter/material.dart';
 import 'package:movieflix/data/dummy_data.dart';
+import 'package:movieflix/screens/movie.dart';
 import 'package:movieflix/widgets/year_grid_item.dart';
 
-class YearScreen extends StatefulWidget {
+class YearScreen extends StatelessWidget {
   const YearScreen({super.key});
 
-  @override
-  State<YearScreen> createState() => _YearScreenState();
-}
+  void _selectYear(BuildContext context) {
+    Navigator.of(context).push(MaterialPageRoute(
+      builder: (ctx) => const MovieScreen(title: 'Some title', movies: []),
+    ));
+  }
 
-class _YearScreenState extends State<YearScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -23,7 +25,15 @@ class _YearScreenState extends State<YearScreen> {
           crossAxisSpacing: 15,
           mainAxisSpacing: 15,
         ),
-        children: [for (final year in avaliableYears) YearGridItem(year: year)],
+        children: [
+          for (final year in avaliableYears)
+            YearGridItem(
+              year: year,
+              onSelectYear: () {
+                _selectYear(context);
+              },
+            ),
+        ],
       ),
     );
   }
