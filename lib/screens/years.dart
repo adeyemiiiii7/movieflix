@@ -1,12 +1,20 @@
 import 'package:flutter/material.dart';
 import 'package:movieflix/data/dummy_data.dart';
+import 'package:movieflix/models/movie.dart';
+import 'package:movieflix/models/year.dart';
 import 'package:movieflix/screens/movie.dart';
 import 'package:movieflix/widgets/year_grid_item.dart';
 
 class YearScreen extends StatelessWidget {
-  const YearScreen({super.key});
+  const YearScreen({super.key, required this.avaliableMovies});
 
-  void _selectYear(BuildContext context) {
+  final List<Movie> avaliableMovies;
+
+  void _selectYear(BuildContext context, Year year) {
+    final selectedMovies = avaliableMovies
+        .where((movie) => movie.years.contains(year.id))
+        .toList();
+
     Navigator.of(context).push(MaterialPageRoute(
       builder: (ctx) => const MovieScreen(title: 'Some title', movies: []),
     ));
@@ -30,7 +38,7 @@ class YearScreen extends StatelessWidget {
             YearGridItem(
               year: year,
               onSelectYear: () {
-                _selectYear(context);
+                _selectYear(context, year);
               },
             ),
         ],

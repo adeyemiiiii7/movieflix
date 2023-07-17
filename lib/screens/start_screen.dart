@@ -38,7 +38,7 @@ class StartScreen extends StatelessWidget {
                   Navigator.push(
                     context,
                     MaterialPageRoute(
-                      builder: (ctx) => const YearScreen(),
+                      builder: (ctx) =>  YearScreen(),
                     ),
                   );
                 },
