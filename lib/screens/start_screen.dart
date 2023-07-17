@@ -38,7 +38,9 @@ class StartScreen extends StatelessWidget {
                   Navigator.push(
                     context,
                     MaterialPageRoute(
-                      builder: (ctx) =>  YearScreen(),
+                      builder: (ctx) => YearScreen(
+                        avaliableMovies: [],
+                      ),
                     ),
                   );
                 },

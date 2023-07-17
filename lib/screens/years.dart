@@ -11,10 +11,8 @@ class YearScreen extends StatelessWidget {
   final List<Movie> avaliableMovies;
 
   void _selectYear(BuildContext context, Year year) {
-    final selectedMovies = avaliableMovies
-        .where((movie) => movie.years.contains(year.id))
-        .toList();
-
+    final selectedMovies =
+        avaliableMovies.where((movie) => movie.year.contains(year.id)).toList();
     Navigator.of(context).push(MaterialPageRoute(
       builder: (ctx) => const MovieScreen(title: 'Some title', movies: []),
     ));

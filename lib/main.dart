@@ -9,7 +9,7 @@ import 'models/year.dart';
 final theme = ThemeData(
   useMaterial3: true,
   colorScheme: ColorScheme.fromSeed(
-    seedColor: Colors.black,
+    seedColor: const Color.fromARGB(103, 87, 72, 72),
     brightness: Brightness.dark,
   ),
   textTheme: GoogleFonts.poppinsTextTheme(),
