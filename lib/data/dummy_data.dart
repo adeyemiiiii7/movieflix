@@ -561,10 +561,12 @@ const dummyData = [
     video:
         'https://www.imdb.com/video/vi1901244185/?playlistId=tt2802144&ref_=tt_ov_vi',
     about:
-        "After young Riley is uprooted from her Midwest life and moved to San Francisco, her emotions - Joy, Fear, Anger, Disgust and Sadness - conflict on how best to navigate a new city, house, and school.",
+        "Gary 'Eggsy' Unwin faces several challenges when he gets recruited as a secret agent in a secret spy organisation in order to look for Richmond Valentine, an eco-terrorist.",
     isHollywood: true,
     isWorldwide: true,
-    isNollywood: false, watch: '',
+    isNollywood: false,
+    watch:
+        'Avalibale to rent on Amazon Instant Video, iTunes, Google Play, and Vudu.',
   ),
   Movie(
     id: 'm25',
@@ -576,7 +578,7 @@ const dummyData = [
     duration: 73,
     restriction: Restriction.ParentalGuidance13,
     imageUrl:
-        'https://www.imdb.com/title/tt2395427/mediaviewer/rm4050576640/?ref_=tt_ov_i',
+        'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTzFYs6PrepGobemI3KusHLnn3J2LJ4vQiISw&usqp=CAU',
     rating: 77,
     video:
         'https://www.imdb.com/video/vi2821566745/?playlistId=tt2395427&ref_=tt_ov_vi',
@@ -584,7 +586,7 @@ const dummyData = [
         "When Tony Stark and Bruce Banner try to jump-start a dormant peacekeeping program called Ultron, things go horribly wrong and it's up to Earth's mightiest heroes to stop the villainous Ultron from enacting his terrible plan.",
     isHollywood: true,
     isWorldwide: true,
-    isNollywood: false, watch: '',
+    isNollywood: false, watch: 'Disney Plus',
   ),
   Movie(
     id: 'm26',
@@ -596,7 +598,7 @@ const dummyData = [
     duration: 125,
     restriction: Restriction.NC18,
     imageUrl:
-        'https://www.imdb.com/title/tt2395427/mediaviewer/rm4050576640/?ref_=tt_ov_i',
+        'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTrq-XH3tGb45jPkhBvm7LN13hd-8v6UNRc6g&usqp=CAU',
     rating: 74,
     video:
         'https://www.imdb.com/video/vi2821566745/?playlistId=tt2395427&ref_=tt_ov_vi',
@@ -604,19 +606,21 @@ const dummyData = [
         "A young African-American man grapples with his identity and sexuality while experiencing the everyday struggles of childhood, adolescence, and burgeoning adulthood.",
     isHollywood: true,
     isWorldwide: true,
-    isNollywood: false, watch: '',
+    isNollywood: false,
+    watch:
+        'Avalibale to rent on Amazon Instant Video, iTunes, Google Play, and Vudu.',
   ),
   Movie(
     id: 'm27',
     year: [
-      'c6',
+      'c7',
     ],
     title: 'Captain America: Civil War',
     genre: Genre.action, // Genre.adventure,
     duration: 147,
     restriction: Restriction.ParentalGuidance13,
     imageUrl:
-        'https://www.imdb.com/title/tt3498820/mediaviewer/rm3218348288/?ref_=tt_ov_i',
+        'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSkBC8UA0muQn7sP6KRglbo-za0h8Rg7nzNaA&usqp=CAU',
     rating: 74,
     video:
         'https://www.imdb.com/video/vi174044441/?playlistId=tt3498820&ref_=tt_pr_ov_vi',
@@ -624,19 +628,19 @@ const dummyData = [
         "Political involvement in the Avengers' affairs causes a rift between Captain America and Iron Man.",
     isHollywood: true,
     isWorldwide: true,
-    isNollywood: false, watch: '',
+    isNollywood: false, watch: 'Disney Plus',
   ),
   Movie(
     id: 'm28',
     year: [
-      'c7',
+      'c8',
     ],
     title: 'Blade Runner 2049',
     genre: Genre.action, // Genre.adventure,
     duration: 147,
     restriction: Restriction.Guidance,
     imageUrl:
-        'https://www.imdb.com/title/tt1856101/mediaviewer/rm2677875712/?ref_=tt_ov_i',
+        'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS35QzSRD5IZ6t2CWaRIYBf1xD1WkPKza1oAQ&usqp=CAU',
     rating: 74,
     video:
         'https://www.imdb.com/video/vi3362371865/?playlistId=tt1856101&ref_=tt_ov_vi',
@@ -649,14 +653,14 @@ const dummyData = [
   Movie(
     id: 'm29',
     year: [
-      'c7',
+      'c8',
     ],
     title: 'Lady Bird',
     genre: Genre.drama, // Genre.adventure,
     duration: 94,
     restriction: Restriction.Guidance,
     imageUrl:
-        'https://www.imdb.com/title/tt4925292/mediaviewer/rm98587392/?ref_=tt_ov_i',
+        'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRXLPaAjA3v6LA6okORY8mUcdsAqn_UiXhULQ&usqp=CAU',
     rating: 74,
     video:
         'https://www.imdb.com/video/vi317437977/?playlistId=tt4925292&ref_=tt_ov_vi',
