@@ -648,7 +648,9 @@ const dummyData = [
         "Young Blade Runner K's discovery of a long-buried secret leads him to track down former Blade Runner Rick Deckard, who's been missing for thirty years.",
     isHollywood: true,
     isWorldwide: true,
-    isNollywood: false, watch: '',
+    isNollywood: false,
+    watch:
+        'Avalibale to rent on Amazon Instant Video, iTunes, Google Play, and Vudu.',
   ),
   Movie(
     id: 'm29',
@@ -668,7 +670,9 @@ const dummyData = [
         "In 2002, an artistically inclined 17-year-old girl comes of age in Sacramento, California.",
     isHollywood: true,
     isWorldwide: true,
-    isNollywood: false, watch: '',
+    isNollywood: false,
+    watch:
+        'Avalibale to rent on Amazon Instant Video, iTunes, Google Play, and Vudu.',
   ),
   Movie(
     id: 'm30',
@@ -680,7 +684,7 @@ const dummyData = [
     duration: 124,
     restriction: Restriction.Guidance,
     imageUrl:
-        'https://www.imdb.com/title/tt1825683/mediaviewer/rm172972800/?ref_=tt_ov_i',
+        'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTKxUUDUi7dLDIlRJN1bhFdnrrIX4XV-0iz6noRGuxSUhh6RdQwNWJ1WBr_iyUaB0XN_C4&usqp=CAU',
     rating: 74,
     video:
         'https://www.imdb.com/video/vi2320939289/?playlistId=tt1825683&ref_=tt_ov_vi',
@@ -688,7 +692,7 @@ const dummyData = [
         "T'Challa, heir to the hidden but advanced kingdom of Wakanda, must step forward to lead his people into a new future and must confront a challenger from his country's past.",
     isHollywood: true,
     isWorldwide: true,
-    isNollywood: false, watch: '',
+    isNollywood: false, watch: 'Disney Plus',
   ),
   Movie(
     id: 'm31',
@@ -700,7 +704,7 @@ const dummyData = [
     duration: 124,
     restriction: Restriction.Guidance,
     imageUrl:
-        'https://www.imdb.com/title/tt4633694/mediaviewer/rm173371392/?ref_=tt_ov_i',
+        'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSfmcEbdaoEbuoUSOaXH5LEOIm0FNxX1Bob8jcbSK3ALFAB9bc3CS89JRFUcSzUA3DIG2U&usqp=CAU',
     rating: 74,
     video:
         'https://www.imdb.com/video/vi1489877529/?playlistId=tt4633694&ref_=tt_ov_vi',
@@ -708,19 +712,19 @@ const dummyData = [
         "Teen Miles Morales becomes the Spider-Man of his universe and must join with five spider-powered individuals from other dimensions to stop a threat for all realities.",
     isHollywood: true,
     isWorldwide: true,
-    isNollywood: false, watch: '',
+    isNollywood: false, watch: 'Disney Plus And Netflix',
   ),
   Movie(
     id: 'm32',
     year: [
-      'c9',
+      'c10',
     ],
     title: 'John Wick: Chapter 3 - Parabellum',
     genre: Genre.drama, // Genre.adventure,
     duration: 130,
     restriction: Restriction.NC18,
     imageUrl:
-        'https://www.imdb.com/title/tt6146586/mediaviewer/rm2374853376/?ref_=tt_ov_i',
+        'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR1KsPNDZBfR7mmKx6R8m46LZ1e-iKOyYIiWw&usqp=CAU',
     rating: 74,
     video:
         'https://www.imdb.com/video/vi3203841305/?playlistId=tt6146586&ref_=tt_ov_vi',
@@ -728,19 +732,21 @@ const dummyData = [
         "John Wick is on the run after killing a member of the international assassins' guild, and with a fourteen million price tag on his head, he is the target of hit men and women everywhere.",
     isHollywood: true,
     isWorldwide: true,
-    isNollywood: false, watch: '',
+    isNollywood: false,
+    watch:
+        'Avalibale to rent on Amazon Instant Video, iTunes, Google Play, and Vudu.',
   ),
   Movie(
     id: 'm33',
     year: [
-      'c9',
+      'c10',
     ],
     title: 'Knives Out',
     genre: Genre.drama, // Genre.adventure,
     duration: 130,
     restriction: Restriction.ParentalGuidance13,
     imageUrl:
-        'https://www.imdb.com/title/tt8946378/mediaviewer/rm2569376769/?ref_=tt_ov_i',
+        'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSR2oGKkZATcwOkfh8z_oEyQvmAK0aKvnVRkg&usqp=CAU',
     rating: 74,
     video:
         'https://www.imdb.com/video/vi2464857881/?playlistId=tt8946378&ref_=tt_ov_vi',
@@ -748,19 +754,19 @@ const dummyData = [
         "A detective investigates the death of the patriarch of an eccentric, combative family.",
     isHollywood: true,
     isWorldwide: true,
-    isNollywood: false, watch: '',
+    isNollywood: false, watch: 'Netflix',
   ),
   Movie(
     id: 'm34',
     year: [
-      'c9',
+      'c10',
     ],
     title: 'Avengers: Endgame',
     genre: Genre.action, // Genre.adventure,
     duration: 181,
     restriction: Restriction.ParentalGuidance13,
     imageUrl:
-        'https://www.imdb.com/title/tt4154796/mediaviewer/rm2775147008/?ref_=tt_ov_i',
+        'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ9uWxV-TRhgbN-k63XYcxLBRfl3sCI1LHU-w&usqp=CAU',
     rating: 74,
     video:
         'https://www.imdb.com/video/vi2163260441/?playlistId=tt4154796&ref_=tt_ov_vi',
@@ -768,6 +774,63 @@ const dummyData = [
         "After the devastating events of Avengers: Infinity War (2018), the universe is in ruins. With the help of remaining allies, the Avengers assemble once more in order to reverse Thanos' actions and restore balance to the universe.",
     isHollywood: true,
     isWorldwide: true,
-    isNollywood: false, watch: '',
+    isNollywood: false, watch: 'Disney plus',
+  ),
+  Movie(
+    id: 'm35',
+    year: [
+      'c11',
+    ],
+    title: 'Extraction',
+    genre: Genre.action, // Genre.adventure,
+    duration: 116,
+    restriction: Restriction.Guidance,
+    imageUrl:
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQcZXVGDcNDb5jYczad4FFt5yPaNtDcsaYybg&usqp=CAU",
+    rating: 68,
+    video: 'https://www.youtube.com/watch?v=L6P3nI6VnlY',
+    about:
+        "Tyler Rake, a fearless black market mercenary, embarks on the most deadly extraction of his career when he's enlisted to rescue the kidnapped son of an imprisoned international crime lord.",
+    isHollywood: true,
+    isWorldwide: true,
+    isNollywood: false, watch: 'Netflix',
+  ),
+  Movie(
+    id: 'm36',
+    year: [
+      'c11',
+    ],
+    title: 'Tenet',
+    genre: Genre.action, // Genre.adventure,
+    duration: 150,
+    restriction: Restriction.Guidance,
+    imageUrl:
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTjtVFf1lrV54IG85WvSQmhSFePbGRcw4ewWw&usqp=CAU",
+    rating: 73,
+    video: 'https://www.youtube.com/watch?v=L6P3nI6VnlY',
+    about:
+        "Armed with only one word, Tenet, and fighting for the survival of the entire world, a Protagonist journeys through a twilight world of international espionage on a mission that will unfold in something beyond real time.",
+    isHollywood: true,
+    isWorldwide: true,
+    isNollywood: false, watch: 'Amazon prime Video',
+  ),
+  Movie(
+    id: 'm37',
+    year: [
+      'c11',
+    ],
+    title: 'Enola Homes',
+    genre: Genre.action, // Genre.adventure,
+    duration: 123,
+    restriction: Restriction.ParentalGuidance13,
+    imageUrl:
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSi4xV2L3BCro_IUJp452S96siZk3e-JPs4FQ&usqp=CAU",
+    rating: 73,
+    video: 'https://www.youtube.com/watch?v=1d0Zf9sXlHk',
+    about:
+        "When Enola Holmes (Sherlock's teen sister) discovers her mother is missing, she endeavours to find her, becoming a super-sleuth in her own right as she outwits her famous brother and unravels a dangerous conspiracy.",
+    isHollywood: true,
+    isWorldwide: true,
+    isNollywood: false, watch: 'Netflix',
   ),
 ];
