@@ -86,14 +86,14 @@ const dummyData = [
     duration: 148,
     restriction: Restriction.ParentalGuidance13,
     imageUrl:
-        'https://www.imdb.com/title/tt1375666/mediaviewer/rm3426651392/?ref_=tt_ov_i',
+        'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSR_bREX_YutIFnr35k2KCb4n40xxS68L_4IQ&usqp=CAU',
     rating: 88,
     video: '',
     about:
         'A thief who steals corporate secrets through the use of  dream-sharing technology is given the inverse task of planting an idea into the mind of a C.E.O. but his tragic past may doom the project and his team to disaster.',
     isHollywood: true,
     isWorldwide: true,
-    isNollywood: false,
+    isNollywood: false, watch: '',
   ),
   Movie(
     id: 'm2',
@@ -105,14 +105,14 @@ const dummyData = [
     duration: 103,
     restriction: Restriction.Guidance,
     imageUrl:
-        'https://www.imdb.com/title/tt0435761/mediaviewer/rm3038678784/?ref_=tt_ov_i',
+        'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTslBxtRaEOoy36AJpBCxhko-39EyG81IVnjA&usqp=CAU',
     video: '',
     rating: 98,
     about:
         "The toys are mistakenly delivered to a day-care center instead of the attic right before Andy leaves for college, and it's up to Woody to convince the other toys that they weren't abandoned and to return home.",
     isHollywood: true,
     isWorldwide: true,
-    isNollywood: false,
+    isNollywood: false, watch: 'Disney Plus',
   ),
   Movie(
     id: 'm3',
@@ -124,14 +124,14 @@ const dummyData = [
     duration: 120,
     restriction: Restriction.Guidance,
     imageUrl:
-        'https://www.imdb.com/title/tt1285016/mediaviewer/rm880244480/?ref_=tt_ov_i',
+        'https://thescriptlab.com/wp-content/uploads/scripts/1123-poster-600x900-1.jpg',
     rating: 78,
     video: '',
     about:
         "As Harvard student Mark Zuckerberg creates the social networking site that would become known as Facebook, he is sued by the twins who claimed he stole their idea and by the co-founder who was later squeezed out of the business.",
     isHollywood: true,
     isWorldwide: true,
-    isNollywood: false,
+    isNollywood: false, watch: '',
   ),
   Movie(
     id: 'm4',
@@ -143,14 +143,14 @@ const dummyData = [
     duration: 98,
     restriction: Restriction.ParentalGuidance13,
     imageUrl:
-        'https://www.imdb.com/title/tt1285016/mediaviewer/rm880244480/?ref_=tt_ov_i',
+        'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRRL-k78Tpm1jzcvVQLSCBQ8mm__l4vwj_DKQ&usqp=CAU',
     rating: 81,
     video: '',
     about:
         "A hapless young Viking who aspires to hunt dragons becomes the unlikely friend of a young dragon himself, and learns there may be more to the creatures than he assumed.",
     isHollywood: true,
     isWorldwide: true,
-    isNollywood: false,
+    isNollywood: false, watch: '',
   ),
   Movie(
     id: 'm5',
@@ -162,14 +162,14 @@ const dummyData = [
     duration: 76,
     restriction: Restriction.NC18,
     imageUrl:
-        'https://www.imdb.com/title/tt1250777/mediaviewer/rm633638656/?ref_=tt_ov_i',
+        'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTQ9LzVAdcGLwEXVVr9W-GerHnVHsMh2FYLIA&usqp=CAU',
     rating: 81,
     video: '',
     about:
         "Dave Lizewski is an unnoticed high school student and comic book fan who one day decides to become a superhero, even though he has no powers, training or meaningful reason to do so.",
     isHollywood: true,
     isWorldwide: true,
-    isNollywood: false,
+    isNollywood: false, watch: '',
   ),
   Movie(
     id: 'm6',
@@ -188,7 +188,7 @@ const dummyData = [
         "Dave Lizewski is an unnoticed high school student and comic book fan who one day decides to become a superhero, even though he has no powers, training or meaningful reason to do so.",
     isHollywood: true,
     isWorldwide: true,
-    isNollywood: false,
+    isNollywood: false, watch: '',
   ),
   Movie(
     id: 'm7',
@@ -199,7 +199,8 @@ const dummyData = [
     genre: Genre.thriller, // Genre.adventure,
     duration: 76,
     restriction: Restriction.NC18,
-    imageUrl: 'https://www.imdb.com/title/tt1130884/mediaviewer/rm1814907136/',
+    imageUrl:
+        'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTgJ0PtGvgaXRnEblBx3n-7ekJkBrnL5oIm4GP5iSock342w-KXBxkM8Dy8uzNv310D5do&usqp=CAU',
     rating: 81,
     video:
         'https://www.imdb.com/video/vi4064281/?playlistId=tt1130884&ref_=tt_ov_vi',
@@ -207,7 +208,7 @@ const dummyData = [
         "Teddy Daniels and Chuck Aule, two US marshals, are sent to an asylum on a remote island in order to investigate the disappearance of a patient, where Teddy uncovers a shocking truth about the place.",
     isHollywood: true,
     isWorldwide: true,
-    isNollywood: false,
+    isNollywood: false, watch: 'Netfilx',
   ),
   Movie(
     id: 'm8',
@@ -219,7 +220,7 @@ const dummyData = [
     duration: 139,
     restriction: Restriction.ParentalGuidance13,
     imageUrl:
-        'https://www.imdb.com/title/tt0478304/mediaviewer/rm4192437504/?ref_=tt_ov_i',
+        'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQzicanOk7lda2HRqgiSR7JVBWb34rhijB7OQ&usqp=CAU',
     rating: 81,
     video:
         'https://www.imdb.com/video/vi612735001/?playlistId=tt0478304&ref_=tt_ov_vi',
@@ -227,7 +228,7 @@ const dummyData = [
         "The story of a family in Waco, Texas in 1956. The eldest son witnesses the loss of innocence and struggles with his parents' conflicting teachings.",
     isHollywood: true,
     isWorldwide: true,
-    isNollywood: false,
+    isNollywood: false, watch: 'Amazon Prime Videos',
   ),
   Movie(
     id: 'm9',
@@ -239,7 +240,7 @@ const dummyData = [
     duration: 123,
     restriction: Restriction.ParentalGuidance13,
     imageUrl:
-        'https://www.imdb.com/title/tt0478304/mediaviewer/rm4192437504/?ref_=tt_ov_i',
+        'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTejnPtcJ9JN7Vy-1NJapZk1pTiWwwYNV55Eg&usqp=CAU',
     rating: 83,
     video:
         'https://www.imdb.com/video/vi2758057497/?playlistId=tt1832382&ref_=tt_ov_vi',
@@ -247,7 +248,7 @@ const dummyData = [
         "A married couple are faced with a difficult decision - to improve the life of their child by moving to another country or to stay in Iran and look after a deteriorating parent who has Alzheimer's disease.",
     isHollywood: false,
     isWorldwide: true,
-    isNollywood: false,
+    isNollywood: false, watch: 'Amazon Prime Videos ',
   ),
   Movie(
     id: 'm10',
@@ -259,7 +260,7 @@ const dummyData = [
     duration: 109,
     restriction: Restriction.ParentalGuidance13,
     imageUrl:
-        'https://www.imdb.com/video/vi775265305/?playlistId=tt1637688&ref_=tt_pr_ov_vi',
+        'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT13NDajgsSvsVbeGvUJ9ACY5m1T1Z0LmGI-g&usqp=CAU',
     rating: 67,
     video:
         'https://www.imdb.com/video/vi2758057497/?playlistId=tt1832382&ref_=tt_ov_vi',
@@ -267,7 +268,7 @@ const dummyData = [
         "In a future where people stop aging at 25, but are engineered to live only one more year, having the means to buy your way out of the situation is a shot at immortal youth. Here, Will Salas finds himself accused of murder and on the run with a hostage - a connection that becomes an important part of the way against the system.",
     isHollywood: true,
     isWorldwide: true,
-    isNollywood: false,
+    isNollywood: false, watch: 'Netflix',
   ),
   Movie(
     id: 'm11',
@@ -278,7 +279,8 @@ const dummyData = [
     genre: Genre.animation, // Genre.adventure,
     duration: 90,
     restriction: Restriction.ParentalGuidance13,
-    imageUrl: 'https://www.imdb.com/title/tt1302011/?ref_=ttls_li_i',
+    imageUrl:
+        'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTXCCypRWcnE_5v3Wc9RMKXzgHmUdrsySf60A&usqp=CAU',
     rating: 67,
     video:
         'https://www.imdb.com/video/vi1639488793/?playlistId=tt1302011&ref_=tt_ov_vi',
@@ -286,7 +288,7 @@ const dummyData = [
         "Po and his friends fight to stop a peacock villain from conquering China with a deadly new weapon, but first the Dragon Warrior must come to terms with his past.",
     isHollywood: true,
     isWorldwide: true,
-    isNollywood: false,
+    isNollywood: false, watch: '',
   ),
   Movie(
     id: 'm12',
@@ -298,14 +300,14 @@ const dummyData = [
     duration: 127,
     restriction: Restriction.Guidance,
     imageUrl:
-        'https://www.imdb.com/title/tt1340800/mediaviewer/rm1489419520/?ref_=tt_ov_i',
+        'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTHmokM8dySSuaOKP7GP7cWIOwClxVMW5bsOw&usqp=CAU',
     rating: 67,
     video: 'https://www.imdb.com/video/vi3394673689/?playlistId=tt1340800',
     about:
         "In the bleak days of the Cold War, espionage veteran George Smiley is forced from semi-retirement to uncover a Soviet Agent within MI6.",
     isHollywood: true,
     isWorldwide: true,
-    isNollywood: false,
+    isNollywood: false, watch: 'Netfilx',
   ),
   Movie(
     id: 'm13',
@@ -317,14 +319,14 @@ const dummyData = [
     duration: 165,
     restriction: Restriction.NC18,
     imageUrl:
-        'https://m.media-amazon.com/images/M/MV5BMjIyNTQ5NjQ1OV5BMl5BanBnXkFtZTcwODg1MDU4OA@@._V1_UY209_CR0,0,140,209_AL_.jpg',
+        'https://shop.soggettivagallery.com/wp-content/uploads/django-unchained-aaron-lea.png',
     rating: 84,
     video: 'https://www.imdb.com/video/vi2291574553/?playlistId=tt1853728',
     about:
         "With the help of a German bounty-hunter, a freed slave sets out to rescue his wife from a brutal plantation owner in Mississippi.",
     isHollywood: true,
     isWorldwide: true,
-    isNollywood: false,
+    isNollywood: false, watch: '',
   ),
   Movie(
     id: 'm14',

@@ -35,6 +35,7 @@ class Movie {
     required this.about,
     required this.rating,
     required this.video,
+    required this.watch,
   });
 
   final String id;
@@ -50,7 +51,7 @@ class Movie {
   final String about;
   final int rating;
   final String video;
-
+  final String watch;
   VideoPlayerController get videoController =>
       VideoPlayerController.networkUrl(video as Uri);
 }

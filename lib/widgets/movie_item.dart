@@ -37,8 +37,8 @@ class MovieItem extends StatelessWidget {
             FadeInImage(
               placeholder: MemoryImage(kTransparentImage),
               image: NetworkImage(movie.imageUrl),
-              fit: BoxFit.cover,
-              height: 200,
+              fit: BoxFit.contain,
+              height: 400,
               width: double.infinity,
             ),
             Positioned(
