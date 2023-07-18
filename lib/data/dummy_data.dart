@@ -288,7 +288,9 @@ const dummyData = [
         "Po and his friends fight to stop a peacock villain from conquering China with a deadly new weapon, but first the Dragon Warrior must come to terms with his past.",
     isHollywood: true,
     isWorldwide: true,
-    isNollywood: false, watch: '',
+    isNollywood: false,
+    watch:
+        'Avalibale for rent on Amazon Video, Google Play Movies, YouTube, Rakuten TV, Apple TV, Sky Store online',
   ),
   Movie(
     id: 'm12',
@@ -326,7 +328,9 @@ const dummyData = [
         "With the help of a German bounty-hunter, a freed slave sets out to rescue his wife from a brutal plantation owner in Mississippi.",
     isHollywood: true,
     isWorldwide: true,
-    isNollywood: false, watch: '',
+    isNollywood: false,
+    watch:
+        ' buy "Django Unchained" on Apple TV, Amazon Video, Google Play Movies, YouTube, Vudu, Microsoft Store, Redbox, DIRECTV, AMC on Demand as download or rent it on Apple TV, Amazon Video, Google Play Movies, YouTube, Vudu, Microsoft Store, Redbox, DIRECTV, Spectrum On Demand online.',
   ),
   Movie(
     id: 'm14',
@@ -338,7 +342,7 @@ const dummyData = [
     duration: 164,
     restriction: Restriction.ParentalGuidance13,
     imageUrl:
-        'https://www.imdb.com/title/tt1345836/mediaviewer/rm834516224/?ref_=tt_ov_i',
+        'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQbYqm0HjOtZdm62f7_atHDa7FQucoFMrA-xA&usqp=CAU',
     rating: 84,
     video:
         'https://www.imdb.com/video/vi144884505/?playlistId=tt1345836&ref_=tt_ov_vi',
@@ -347,6 +351,8 @@ const dummyData = [
     isHollywood: true,
     isWorldwide: true,
     isNollywood: false,
+    watch:
+        'Avalibale to rent on Amazon Instant Video, iTunes, Google Play, and Vudu.',
   ),
   Movie(
     id: 'm15',
@@ -367,6 +373,8 @@ const dummyData = [
     isHollywood: true,
     isWorldwide: true,
     isNollywood: false,
+    watch:
+        'Avalibale to rent on Amazon Instant Video, iTunes, Google Play, and Vudu.',
   ),
   Movie(
     id: 'm16',
@@ -387,18 +395,20 @@ const dummyData = [
     isHollywood: true,
     isWorldwide: true,
     isNollywood: false,
+    watch:
+        'Avalibale to rent on Amazon Instant Video, iTunes, Google Play, and Vudu.',
   ),
   Movie(
     id: 'm17',
     year: [
-      'c3',
+      'c4',
     ],
     title: 'Her',
     genre: Genre.drama, // Genre.adventure,
     duration: 125,
     restriction: Restriction.Guidance,
     imageUrl:
-        'https://www.imdb.com/title/tt1798709/mediaviewer/rm1539299328/?ref_=tt_ov_i',
+        'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRWV222zbsWvn4TI2JjMEWs2LY1HfUOCSjaig&usqp=CAU',
     rating: 80,
     video:
         'https://www.imdb.com/video/vi4112492569/?playlistId=tt1798709&ref_=tt_ov_vi',
@@ -407,6 +417,8 @@ const dummyData = [
     isHollywood: true,
     isWorldwide: true,
     isNollywood: false,
+    watch:
+        'Avalibale to rent on Amazon Instant Video, iTunes, Google Play, and Vudu.',
   ),
   Movie(
     id: 'm18',
@@ -417,8 +429,7 @@ const dummyData = [
     genre: Genre.drama, // Genre.adventure,
     duration: 119,
     restriction: Restriction.Guidance,
-    imageUrl:
-        'https://www.imdb.com/title/tt2562232/mediaviewer/rm3926180864/?ref_=tt_ov_i',
+    imageUrl: 'https://assets2.ignimgs.com/2015/02/06/birdmandvdjpg-ac4b4a.jpg',
     rating: 77,
     video:
         'https://www.imdb.com/video/vi1378069529/?playlistId=tt2562232&ref_=tt_ov_vi',
@@ -427,18 +438,20 @@ const dummyData = [
     isHollywood: true,
     isWorldwide: true,
     isNollywood: false,
+    watch:
+        'Avalibale to rent on Amazon Instant Video, iTunes, Google Play, and Vudu.',
   ),
   Movie(
     id: 'm19',
     year: [
-      'c4',
+      'c5',
     ],
     title: 'Leviathan',
     genre: Genre.drama, // Genre.adventure,
     duration: 140,
     restriction: Restriction.Guidance,
     imageUrl:
-        'https://www.imdb.com/title/tt2802154/mediaviewer/rm3515366912/?ref_=tt_ov_i',
+        'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQLl5qvB8MNKy-YAKU_NwHccJ4scj-dtouIbQ&usqp=CAU',
     rating: 92,
     video:
         'https://www.imdb.com/video/vi869838617/?playlistId=tt2802154&ref_=tt_ov_vi',
@@ -447,18 +460,20 @@ const dummyData = [
     isHollywood: true,
     isWorldwide: true,
     isNollywood: false,
+    watch:
+        'Avalibale to rent on Amazon Instant Video, iTunes, Google Play, and Vudu.',
   ),
   Movie(
     id: 'm20',
     year: [
-      'c4',
+      'c5',
     ],
     title: 'The Grand Budapest Hotel',
     genre: Genre.comedy, // Genre.adventure,
     duration: 109,
     restriction: Restriction.Guidance,
     imageUrl:
-        'https://www.imdb.com/title/tt2278388/mediaviewer/rm1834474496/?ref_=tt_ov_i',
+        'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTm8-zytPVRix3bODDdKo-3iBTzfqOXske-aA&usqp=CAU',
     rating: 81,
     video:
         'https://www.imdb.com/video/vi1157933593/?playlistId=tt2278388&ref_=tt_ov_vi',
@@ -467,25 +482,27 @@ const dummyData = [
     isHollywood: true,
     isWorldwide: true,
     isNollywood: false,
+    watch:
+        'Avalibale to rent on Amazon Instant Video, iTunes, Google Play, and Vudu.',
   ),
   Movie(
     id: 'm21',
     year: [
-      'c4',
+      'c5',
     ],
     title: 'Boyhood',
     genre: Genre.drama, // Genre.adventure,
     duration: 165,
     restriction: Restriction.Guidance,
     imageUrl:
-        'https://www.imdb.com/title/tt1065073/mediaviewer/rm4108897280/?ref_=tt_ov_i',
+        'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQY6jZD11Pm5lLeBmUI-3IcU1zgTAfuHwWiv8_PkQgmqvMjOYEAPO0XGONhdjaVPWaNZX4&usqp=CAU',
     rating: 81,
     video:
         'https://www.imdb.com/video/vi1306504217/?playlistId=tt1065073&ref_=tt_ov_vi',
     about: "The life of Mason, from early childhood to his arrival at college.",
     isHollywood: true,
     isWorldwide: true,
-    isNollywood: false,
+    isNollywood: false, watch: 'Apple Tv Or Amazon prime Video',
   ),
   Movie(
     id: 'm22',
@@ -497,7 +514,7 @@ const dummyData = [
     duration: 131,
     restriction: Restriction.ParentalGuidance13,
     imageUrl:
-        'https://www.imdb.com/title/tt1065073/mediaviewer/rm4108897280/?ref_=tt_ov_i',
+        'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTk1bHh4ZI6Sqc4EB1XDudaNH7_vf-lFvkn8Q&usqp=CAU',
     rating: 74,
     video:
         'https://www.imdb.com/video/vi1306504217/?playlistId=tt1065073&ref_=tt_ov_vi',
@@ -506,6 +523,8 @@ const dummyData = [
     isHollywood: true,
     isWorldwide: true,
     isNollywood: false,
+    watch:
+        'Avalibale to rent on Amazon Instant Video, iTunes, Google Play, and Vudu.',
   ),
   Movie(
     id: 'm23',
@@ -517,7 +536,7 @@ const dummyData = [
     duration: 95,
     restriction: Restriction.ParentalGuidance13,
     imageUrl:
-        'https://www.imdb.com/title/tt2096673/mediaviewer/rm3662344960/?ref_=tt_ov_i',
+        'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRgViwN8oJck8QQTvIQeG7TOVZZqwODyk3P1A&usqp=CAU',
     rating: 81,
     video:
         'https://www.imdb.com/video/vi203730969/?playlistId=tt2096673&ref_=tt_ov_vi',
@@ -525,14 +544,14 @@ const dummyData = [
         "After young Riley is uprooted from her Midwest life and moved to San Francisco, her emotions - Joy, Fear, Anger, Disgust and Sadness - conflict on how best to navigate a new city, house, and school.",
     isHollywood: true,
     isWorldwide: true,
-    isNollywood: false,
+    isNollywood: false, watch: 'Disney Plus',
   ),
   Movie(
     id: 'm24',
     year: [
       'c5',
     ],
-    title: 'Inside Out',
+    title: 'Kingsman Secret Service',
     genre: Genre.action, // Genre.adventure,
     duration: 77,
     restriction: Restriction.Guidance,
@@ -545,7 +564,7 @@ const dummyData = [
         "After young Riley is uprooted from her Midwest life and moved to San Francisco, her emotions - Joy, Fear, Anger, Disgust and Sadness - conflict on how best to navigate a new city, house, and school.",
     isHollywood: true,
     isWorldwide: true,
-    isNollywood: false,
+    isNollywood: false, watch: '',
   ),
   Movie(
     id: 'm25',
@@ -565,7 +584,7 @@ const dummyData = [
         "When Tony Stark and Bruce Banner try to jump-start a dormant peacekeeping program called Ultron, things go horribly wrong and it's up to Earth's mightiest heroes to stop the villainous Ultron from enacting his terrible plan.",
     isHollywood: true,
     isWorldwide: true,
-    isNollywood: false,
+    isNollywood: false, watch: '',
   ),
   Movie(
     id: 'm26',
@@ -585,7 +604,7 @@ const dummyData = [
         "A young African-American man grapples with his identity and sexuality while experiencing the everyday struggles of childhood, adolescence, and burgeoning adulthood.",
     isHollywood: true,
     isWorldwide: true,
-    isNollywood: false,
+    isNollywood: false, watch: '',
   ),
   Movie(
     id: 'm27',
@@ -605,7 +624,7 @@ const dummyData = [
         "Political involvement in the Avengers' affairs causes a rift between Captain America and Iron Man.",
     isHollywood: true,
     isWorldwide: true,
-    isNollywood: false,
+    isNollywood: false, watch: '',
   ),
   Movie(
     id: 'm28',
@@ -625,7 +644,7 @@ const dummyData = [
         "Young Blade Runner K's discovery of a long-buried secret leads him to track down former Blade Runner Rick Deckard, who's been missing for thirty years.",
     isHollywood: true,
     isWorldwide: true,
-    isNollywood: false,
+    isNollywood: false, watch: '',
   ),
   Movie(
     id: 'm29',
@@ -645,7 +664,7 @@ const dummyData = [
         "In 2002, an artistically inclined 17-year-old girl comes of age in Sacramento, California.",
     isHollywood: true,
     isWorldwide: true,
-    isNollywood: false,
+    isNollywood: false, watch: '',
   ),
   Movie(
     id: 'm30',
@@ -665,7 +684,7 @@ const dummyData = [
         "T'Challa, heir to the hidden but advanced kingdom of Wakanda, must step forward to lead his people into a new future and must confront a challenger from his country's past.",
     isHollywood: true,
     isWorldwide: true,
-    isNollywood: false,
+    isNollywood: false, watch: '',
   ),
   Movie(
     id: 'm31',
@@ -685,7 +704,7 @@ const dummyData = [
         "Teen Miles Morales becomes the Spider-Man of his universe and must join with five spider-powered individuals from other dimensions to stop a threat for all realities.",
     isHollywood: true,
     isWorldwide: true,
-    isNollywood: false,
+    isNollywood: false, watch: '',
   ),
   Movie(
     id: 'm32',
@@ -705,7 +724,7 @@ const dummyData = [
         "John Wick is on the run after killing a member of the international assassins' guild, and with a fourteen million price tag on his head, he is the target of hit men and women everywhere.",
     isHollywood: true,
     isWorldwide: true,
-    isNollywood: false,
+    isNollywood: false, watch: '',
   ),
   Movie(
     id: 'm33',
@@ -725,7 +744,7 @@ const dummyData = [
         "A detective investigates the death of the patriarch of an eccentric, combative family.",
     isHollywood: true,
     isWorldwide: true,
-    isNollywood: false,
+    isNollywood: false, watch: '',
   ),
   Movie(
     id: 'm34',
@@ -745,6 +764,6 @@ const dummyData = [
         "After the devastating events of Avengers: Infinity War (2018), the universe is in ruins. With the help of remaining allies, the Avengers assemble once more in order to reverse Thanos' actions and restore balance to the universe.",
     isHollywood: true,
     isWorldwide: true,
-    isNollywood: false,
+    isNollywood: false, watch: '',
   ),
 ];
