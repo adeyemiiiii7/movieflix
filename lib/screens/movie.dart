@@ -4,15 +4,17 @@ import 'package:movieflix/screens/movie_deals.dart';
 import 'package:movieflix/widgets/movie_item.dart';
 
 class MovieScreen extends StatelessWidget {
-  const MovieScreen({super.key, this.title, required this.movies});
+  const MovieScreen(
+      {super.key, this.title, required this.movies, required this.onPressList});
 
   final String? title;
   final List<Movie> movies;
-
+  final void Function(Movie movie) onPressList;
   void selectMovie(BuildContext context, Movie movie) {
     Navigator.of(context).push(
       MaterialPageRoute(
         builder: (ctx) => MovieDetailsScreen(
+          onPressList: onPressList,
           movie: movie,
         ),
       ),
