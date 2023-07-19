@@ -1,19 +1,19 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:movieflix/screens/start_screen.dart';
+import 'package:movieflix/screens/tabs.dart';
 import 'package:movieflix/screens/years.dart';
 import 'package:movieflix/widgets/year_grid_item.dart';
 
 import 'models/year.dart';
 
 final theme = ThemeData(
-  useMaterial3: true,
-  colorScheme: ColorScheme.fromSeed(
-    seedColor: const Color.fromARGB(103, 87, 72, 72),
-    brightness: Brightness.dark,
-  ),
-  textTheme: GoogleFonts.poppinsTextTheme(),
-);
+    useMaterial3: true,
+    colorScheme: ColorScheme.fromSeed(
+      seedColor: const Color.fromARGB(103, 87, 72, 72),
+      brightness: Brightness.dark,
+    ),
+    textTheme: GoogleFonts.poppinsTextTheme().apply(bodyColor: Colors.white));
 
 void main() {
   runApp(const App());
@@ -27,9 +27,7 @@ class App extends StatelessWidget {
     return MaterialApp(
         debugShowCheckedModeBanner: false,
         theme: theme,
-        home: StartScreen(
-          onContinue: () {},
-        )
+        home: const TabsScreen()
         // StartScreen(onContinue: () {
         //   Navigator.push(
         //     context,
