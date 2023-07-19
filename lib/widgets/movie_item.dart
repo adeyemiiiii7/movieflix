@@ -73,7 +73,7 @@ class MovieItem extends StatelessWidget {
                             label: '${movie.duration} min',
                           ),
                         ),
-                        const SizedBox(width: 12),
+                        const SizedBox(width: 14),
                         Expanded(
                           child: MovieItemTrait(
                             icon: Icons.movie_filter_outlined,

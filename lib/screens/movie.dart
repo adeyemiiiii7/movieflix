@@ -4,9 +4,9 @@ import 'package:movieflix/screens/movie_deals.dart';
 import 'package:movieflix/widgets/movie_item.dart';
 
 class MovieScreen extends StatelessWidget {
-  const MovieScreen({super.key, required this.title, required this.movies});
+  const MovieScreen({super.key, this.title, required this.movies});
 
-  final String title;
+  final String? title;
   final List<Movie> movies;
 
   void selectMovie(BuildContext context, Movie movie) {
@@ -52,9 +52,13 @@ class MovieScreen extends StatelessWidget {
         ),
       );
     }
+
+    if (title == null) {
+      return content;
+    }
     return Scaffold(
       appBar: AppBar(
-        title: Text(title),
+        title: Text(title!),
       ),
       body: content,
     );

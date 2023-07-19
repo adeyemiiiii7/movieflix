@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:movieflix/screens/movie.dart';
 import 'package:movieflix/screens/years.dart';
 
+import '../models/movie.dart';
+
 class TabsScreen extends StatefulWidget {
   const TabsScreen({super.key});
 
@@ -11,6 +13,17 @@ class TabsScreen extends StatefulWidget {
 
 class _TabsScreenState extends State<TabsScreen> {
   int _selectedPageIndex = 0;
+  final List<Movie> _listMovies = [];
+
+  void _onPressMovieListStatus(Movie movie) {
+    final isExisting = _listMovies.contains(movie);
+
+    if (isExisting) {
+      _listMovies.remove(movie);
+    } else {
+      _listMovies.add(movie);
+    }
+  }
 
   void _selectedPage(int index) {
     setState(() {
@@ -25,7 +38,6 @@ class _TabsScreenState extends State<TabsScreen> {
     if (_selectedPageIndex == 1) {
       activePage = const MovieScreen(
         movies: [],
-        title: '',
       );
       activePageTitle = 'My List';
     }

@@ -23,27 +23,22 @@ class YearScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: const Text('Pick A Year'),
+    return GridView(
+      gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+        crossAxisCount: 2,
+        childAspectRatio: 3 / 2,
+        crossAxisSpacing: 15,
+        mainAxisSpacing: 15,
       ),
-      body: GridView(
-        gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-          crossAxisCount: 2,
-          childAspectRatio: 3 / 2,
-          crossAxisSpacing: 15,
-          mainAxisSpacing: 15,
-        ),
-        children: [
-          for (final year in avaliableYears)
-            YearGridItem(
-              year: year,
-              onSelectYear: () {
-                _selectYear(context, year);
-              },
-            ),
-        ],
-      ),
+      children: [
+        for (final year in avaliableYears)
+          YearGridItem(
+            year: year,
+            onSelectYear: () {
+              _selectYear(context, year);
+            },
+          ),
+      ],
     );
   }
 }
