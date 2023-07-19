@@ -2,15 +2,19 @@ import 'package:flutter/material.dart';
 import 'package:movieflix/models/movie.dart';
 
 class MovieDetailsScreen extends StatelessWidget {
-  const MovieDetailsScreen({super.key, required this.movie});
+  const MovieDetailsScreen(
+      {super.key, required this.movie, required this.onPressList});
   final Movie movie;
-
+  final void Function(Movie movie) onPressList;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(title: Text(movie.title), actions: [
         IconButton(
-            onPressed: () {}, icon: const Icon(Icons.check_box_outline_blank))
+            onPressed: () {
+              onPressList(movie);
+            },
+            icon: const Icon(Icons.check_box_outline_blank))
       ]),
       body: SingleChildScrollView(
         child: Column(

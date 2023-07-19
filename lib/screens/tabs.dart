@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:movieflix/screens/movie.dart';
 import 'package:movieflix/screens/years.dart';
+import 'package:movieflix/widgets/main_drawer.dart';
 
 import '../models/movie.dart';
 
@@ -14,14 +15,26 @@ class TabsScreen extends StatefulWidget {
 class _TabsScreenState extends State<TabsScreen> {
   int _selectedPageIndex = 0;
   final List<Movie> _listMovies = [];
+  void _showInfoMessage(String message) {
+    ScaffoldMessenger.of(context).clearSnackBars();
+    ScaffoldMessenger.maybeOf(context)
+        ?.showSnackBar(SnackBar(content: Text(message)));
+  }
 
   void _onPressMovieListStatus(Movie movie) {
     final isExisting = _listMovies.contains(movie);
 
     if (isExisting) {
-      _listMovies.remove(movie);
+      setState(() {
+        _listMovies.remove(movie);
+      });
+      _showInfoMessage('Removed to List');
     } else {
-      _listMovies.add(movie);
+      setState(() {
+        _listMovies.add(movie);
+      });
+
+      _showInfoMessage('Added to List');
     }
   }
 
@@ -33,18 +46,18 @@ class _TabsScreenState extends State<TabsScreen> {
 
   @override
   Widget build(BuildContext context) {
-    Widget activePage = const YearScreen();
+    Widget activePage = YearScreen(onPressList: _onPressMovieListStatus);
     var activePageTitle = 'Years';
     if (_selectedPageIndex == 1) {
-      activePage = const MovieScreen(
-        movies: [],
-      );
+      activePage = MovieScreen(
+          movies: _listMovies, onPressList: _onPressMovieListStatus);
       activePageTitle = 'My List';
     }
     return Scaffold(
         appBar: AppBar(
           title: Text(activePageTitle),
         ),
+        drawer: const MainDrawer(),
         body: activePage,
         bottomNavigationBar: BottomNavigationBar(
           onTap: _selectedPage,

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:movieflix/models/movie.dart';
 import 'package:movieflix/screens/start_screen.dart';
 import 'package:movieflix/screens/tabs.dart';
 import 'package:movieflix/screens/years.dart';
@@ -25,17 +26,19 @@ class App extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-        debugShowCheckedModeBanner: false,
-        theme: theme,
-        home: const TabsScreen()
-        // StartScreen(onContinue: () {
-        //   Navigator.push(
-        //     context,
-        //     MaterialPageRoute(
-        //       builder: (ctx) => const YearScreen(),
-        //     ),
-        //   );
-        // }),
+      debugShowCheckedModeBanner: false,
+      theme: theme,
+      home: //const TabsScreen()
+          StartScreen(onContinue: () {
+        Navigator.pop(
+          context,
+          MaterialPageRoute(
+            builder: (ctx) => YearScreen(
+              onPressList: (Movie movie) {},
+            ),
+          ),
         );
+      }),
+    );
   }
 }

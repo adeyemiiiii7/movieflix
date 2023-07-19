@@ -1,10 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:movieflix/models/movie.dart';
+import 'package:movieflix/screens/tabs.dart';
 import 'package:movieflix/screens/years.dart';
 
 class StartScreen extends StatelessWidget {
-  const StartScreen({super.key, required this.onContinue});
-
+  const StartScreen({
+    super.key,
+    required this.onContinue,
+  });
+  //final void Function(Movie movie) onPressList;
   final VoidCallback onContinue;
   @override
   Widget build(BuildContext context) {
@@ -35,10 +40,12 @@ class StartScreen extends StatelessWidget {
               ),
               ElevatedButton(
                 onPressed: () {
-                  Navigator.push(
+                  Navigator.pushReplacement(
                     context,
                     MaterialPageRoute(
-                      builder: (ctx) => const YearScreen(),
+                      builder: (ctx) => const TabsScreen(
+                          //   onPressList: onPressList,
+                          ),
                       //avaliableMovies: [],
                     ),
                   );

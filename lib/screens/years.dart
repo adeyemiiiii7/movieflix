@@ -6,10 +6,11 @@ import 'package:movieflix/screens/movie.dart';
 import 'package:movieflix/widgets/year_grid_item.dart';
 
 class YearScreen extends StatelessWidget {
-  const YearScreen({
-    super.key,
-    //required this.avaliableMovies
-  });
+  const YearScreen(
+      {super.key,
+      //required this.avaliableMovies
+      required this.onPressList});
+  final void Function(Movie movie) onPressList;
 
   // final List<Movie> avaliableMovies;
 
@@ -17,7 +18,8 @@ class YearScreen extends StatelessWidget {
     final selectedMovies =
         dummyData.where((movie) => movie.year.contains(year.id)).toList();
     Navigator.of(context).push(MaterialPageRoute(
-      builder: (ctx) => MovieScreen(title: year.title, movies: selectedMovies),
+      builder: (ctx) => MovieScreen(
+          title: year.title, movies: selectedMovies, onPressList: onPressList),
     ));
   }
 
