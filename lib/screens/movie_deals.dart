@@ -8,15 +8,16 @@ class MovieDetailsScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text(movie.title),
-      ),
+      appBar: AppBar(title: Text(movie.title), actions: [
+        IconButton(
+            onPressed: () {}, icon: const Icon(Icons.check_box_outline_blank))
+      ]),
       body: SingleChildScrollView(
         child: Column(
           children: [
             Image.network(
               movie.imageUrl,
-              height: 300,
+              height: 500,
               width: double.infinity,
               fit: BoxFit.contain,
             ),
