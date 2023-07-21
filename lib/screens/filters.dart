@@ -1,8 +1,22 @@
 import 'package:flutter/material.dart';
 
-class FiltersScreen extends StatefulWidget {
-  const FiltersScreen({super.key});
+enum Filter {
+  adventure,
+  action,
+  comedy,
+  animation,
+  horror,
+  romance,
+  thriller,
+  drama,
+  fantasy,
+  biography
+}
 
+class FiltersScreen extends StatefulWidget {
+  const FiltersScreen({super.key, required this.currentFilters});
+
+  final Map<Filter, bool> currentFilters;
   @override
   State<FiltersScreen> createState() => _FiltersScreenState();
 }
@@ -15,7 +29,7 @@ class _FiltersScreenState extends State<FiltersScreen> {
     var _comedyMovies = false;
     var _animationMovies = false;
     var _horrorMovies = false;
-    var _romanceMovies = false;
+    // var _romanceMovies = false;
     var _thrillerMovies = false;
     var _dramaMovies = false;
     var _fantasyMovies = false;
@@ -130,6 +144,54 @@ class _FiltersScreenState extends State<FiltersScreen> {
           },
           title: Text(
             'Thriller-Movies',
+            style: Theme.of(context).textTheme.titleLarge!.copyWith(
+                  color: Theme.of(context).colorScheme.onBackground,
+                ),
+          ),
+          activeColor: Theme.of(context).colorScheme.tertiary,
+          contentPadding: const EdgeInsets.only(left: 34, right: 22),
+        ),
+        SwitchListTile(
+          value: _dramaMovies,
+          onChanged: (isChecked) {
+            setState(() {
+              _dramaMovies = isChecked;
+            });
+          },
+          title: Text(
+            'Drama-Movies',
+            style: Theme.of(context).textTheme.titleLarge!.copyWith(
+                  color: Theme.of(context).colorScheme.onBackground,
+                ),
+          ),
+          activeColor: Theme.of(context).colorScheme.tertiary,
+          contentPadding: const EdgeInsets.only(left: 34, right: 22),
+        ),
+        SwitchListTile(
+          value: _fantasyMovies,
+          onChanged: (isChecked) {
+            setState(() {
+              _fantasyMovies = isChecked;
+            });
+          },
+          title: Text(
+            'Fantasy-Movies',
+            style: Theme.of(context).textTheme.titleLarge!.copyWith(
+                  color: Theme.of(context).colorScheme.onBackground,
+                ),
+          ),
+          activeColor: Theme.of(context).colorScheme.tertiary,
+          contentPadding: const EdgeInsets.only(left: 34, right: 22),
+        ),
+        SwitchListTile(
+          value: _biographyMovies,
+          onChanged: (isChecked) {
+            setState(() {
+              _biographyMovies = isChecked;
+            });
+          },
+          title: Text(
+            'Biography-Movies',
             style: Theme.of(context).textTheme.titleLarge!.copyWith(
                   color: Theme.of(context).colorScheme.onBackground,
                 ),
