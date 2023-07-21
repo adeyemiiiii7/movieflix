@@ -6,6 +6,19 @@ import 'package:movieflix/widgets/main_drawer.dart';
 
 import '../models/movie.dart';
 
+const kIntialFilters = {
+  Filter.adventure: false,
+  Filter.action: false,
+  Filter.comedy: false,
+  Filter.animation: false,
+  Filter.horror: false,
+  Filter.romance: false,
+  Filter.thriller: false,
+  Filter.drama: false,
+  Filter.fantasy: false,
+  Filter.biography: false,
+};
+
 class TabsScreen extends StatefulWidget {
   const TabsScreen({super.key});
 
@@ -15,6 +28,7 @@ class TabsScreen extends StatefulWidget {
 
 class _TabsScreenState extends State<TabsScreen> {
   int _selectedPageIndex = 0;
+  Map<Filter, bool> _selectedFilters = kIntialFilters;
   final List<Movie> _listMovies = [];
   void _showInfoMessage(String message) {
     ScaffoldMessenger.of(context).clearSnackBars();
@@ -50,7 +64,9 @@ class _TabsScreenState extends State<TabsScreen> {
     if (identifier == 'filters') {
       Navigator.of(context).push(
         MaterialPageRoute(
-          builder: (ctx) => const FiltersScreen(),
+          builder: (ctx) => FiltersScreen(
+            currentFilters: _selectedFilters,
+          ),
         ),
       );
     }
