@@ -47,6 +47,7 @@ class _FiltersScreenState extends State<FiltersScreen> {
     _biographyMovies = widget.currentFilters[Filter.biography]!;
   }
 
+  @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
