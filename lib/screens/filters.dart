@@ -22,18 +22,32 @@ class FiltersScreen extends StatefulWidget {
 }
 
 class _FiltersScreenState extends State<FiltersScreen> {
+  var _adventureMovies = false;
+  var _actionMovies = false;
+  var _comedyMovies = false;
+  var _animationMovies = false;
+  var _horrorMovies = false;
+  // var _romanceMovies = false;
+  var _thrillerMovies = false;
+  var _dramaMovies = false;
+  var _fantasyMovies = false;
+  var _biographyMovies = false;
   @override
+  void initstate() {
+    super.initState();
+    _adventureMovies = widget.currentFilters[Filter.adventure]!;
+    _actionMovies = widget.currentFilters[Filter.action]!;
+    _comedyMovies = widget.currentFilters[Filter.comedy]!;
+    _animationMovies = widget.currentFilters[Filter.animation]!;
+    _horrorMovies = widget.currentFilters[Filter.horror]!;
+    //_romanceMovies = widget.currentFilters[Filter.romance]!;
+    _thrillerMovies = widget.currentFilters[Filter.thriller]!;
+    _dramaMovies = widget.currentFilters[Filter.drama]!;
+    _fantasyMovies = widget.currentFilters[Filter.fantasy]!;
+    _biographyMovies = widget.currentFilters[Filter.biography]!;
+  }
+
   Widget build(BuildContext context) {
-    var _adventureMovies = false;
-    var _actionMovies = false;
-    var _comedyMovies = false;
-    var _animationMovies = false;
-    var _horrorMovies = false;
-    // var _romanceMovies = false;
-    var _thrillerMovies = false;
-    var _dramaMovies = false;
-    var _fantasyMovies = false;
-    var _biographyMovies = false;
     return Scaffold(
       appBar: AppBar(
         title: const Text('Filters...'),
