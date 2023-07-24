@@ -1,20 +1,30 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:movieflix/models/movie.dart';
+import 'package:movieflix/providers/list_provider.dart';
 
-class MovieDetailsScreen extends StatelessWidget {
+class MovieDetailsScreen extends ConsumerWidget {
   const MovieDetailsScreen(
       {super.key, required this.movie, required this.onPressList});
   final Movie movie;
   final void Function(Movie movie) onPressList;
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context, WidgetRef ref) {
     return Scaffold(
       appBar: AppBar(
         title: Text(movie.title),
         actions: [
           IconButton(
             onPressed: () {
-              onPressList(movie);
+              final wasAdded = ref
+                  .read(ListMoviesProvider.notifier)
+                  .onPressMovieListStatus(movie);
+              ScaffoldMessenger.of(context).clearSnackBars();
+              ScaffoldMessenger.of(context).showSnackBar(SnackBar(
+                content: Text(wasAdded
+                    ? 'Movie Added To My List.'
+                    : 'Movie Removed From My List.'),
+              ));
             },
             icon: const Icon(Icons.favorite_border),
           ),

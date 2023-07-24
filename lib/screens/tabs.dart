@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:movieflix/providers/movies_provider.dart';
 import 'package:movieflix/screens/filters.dart';
 import 'package:movieflix/screens/movie.dart';
 import 'package:movieflix/screens/years.dart';
@@ -19,39 +21,40 @@ const kIntialFilters = {
   Filter.biography: false,
 };
 
-class TabsScreen extends StatefulWidget {
+class TabsScreen extends ConsumerStatefulWidget {
   const TabsScreen({super.key});
 
   @override
-  State<TabsScreen> createState() => _TabsScreenState();
+  ConsumerState<TabsScreen> createState() => _TabsScreenState();
 }
 
-class _TabsScreenState extends State<TabsScreen> {
+class _TabsScreenState extends ConsumerState<TabsScreen> {
   int _selectedPageIndex = 0;
   Map<Filter, bool> _selectedFilters = kIntialFilters;
   final List<Movie> _listMovies = [];
-  void _showInfoMessage(String message) {
-    ScaffoldMessenger.of(context).clearSnackBars();
-    ScaffoldMessenger.maybeOf(context)
-        ?.showSnackBar(SnackBar(content: Text(message)));
-  }
+  
+  // void _showInfoMessage(String message) {
+  //   ScaffoldMessenger.of(context).clearSnackBars();
+  //   ScaffoldMessenger.maybeOf(context)
+  //       ?.showSnackBar(SnackBar(content: Text(message)));
+  // }
 
-  void _onPressMovieListStatus(Movie movie) {
-    final isExisting = _listMovies.contains(movie);
+  // void _onPressMovieListStatus(Movie movie) {
+  //   final isExisting = _listMovies.contains(movie);
 
-    if (isExisting) {
-      setState(() {
-        _listMovies.remove(movie);
-      });
-      _showInfoMessage('Removed to List');
-    } else {
-      setState(() {
-        _listMovies.add(movie);
-      });
+  //   if (isExisting) {
+  //     setState(() {
+  //       _listMovies.remove(movie);
+  //     });
+  //     _showInfoMessage('Removed to List');
+  //   } else {
+  //     setState(() {
+  //       _listMovies.add(movie);
+  //     });
 
-      _showInfoMessage('Added to List');
-    }
-  }
+  //     _showInfoMessage('Added to List');
+  //   }
+  // }
 
   void _selectedPage(int index) {
     setState(() {
@@ -59,22 +62,73 @@ class _TabsScreenState extends State<TabsScreen> {
     });
   }
 
-  void _setScreen(String identifier) {
+  void _setScreen(String identifier) async {
     Navigator.of(context).pop();
     if (identifier == 'filters') {
-      Navigator.of(context).push(
+     final result =  await Navigator.of(context).push<Map<Filter, bool>>(
         MaterialPageRoute(
           builder: (ctx) => FiltersScreen(
             currentFilters: _selectedFilters,
           ),
         ),
       );
+    
+  
+
+   setState(() {
+        _selectedFilters = result ?? kIntialFilters;
+      });
     }
-  }
+}
 
   @override
   Widget build(BuildContext context) {
-    Widget activePage = YearScreen(onPressList: _onPressMovieListStatus);
+final movies = ref.watch(moviesProvider);
+final avaliableMovies = movies.where((movies){
+  if (_selectedFilters[Filter.adventure]! && !Genre.adventure) {
+  return false;
+}
+
+if (_selectedFilters[Filter.action]! && !movies.isAction) {
+  return false;
+}
+
+if (_selectedFilters[Filter.comedy]! && !movies.isComedy) {
+  return false;
+}
+
+if (_selectedFilters[Filter.animation]! && !movies.isAnimation) {
+  return false;
+}
+
+if (_selectedFilters[Filter.horror]! && !movies.isHorror) {
+  return false;
+}
+
+if (_selectedFilters[Filter.thriller]! && !movies.isThriller) {
+  return false;
+}
+
+if (_selectedFilters[Filter.drama]! && !movies.isDrama) {
+  return false;
+}
+
+if (_selectedFilters[Filter.fantasy]! && !movies.isFantasy) {
+  return false;
+}
+
+if (_selectedFilters[Filter.biography]! && !movies.isBiography) {
+  return false;
+}
+return true;
+
+}).toList();
+
+  
+  
+  
+  
+    Widget activePage = YearScreen(onPressList: );
     var activePageTitle = 'Years';
     if (_selectedPageIndex == 1) {
       activePage = MovieScreen(
