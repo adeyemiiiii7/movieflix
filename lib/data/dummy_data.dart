@@ -616,7 +616,7 @@ const dummyData = [
     isthriller: false,
     isfantasy: false,
     isbiography: false,
-    isdrama: false,
+    isdrama: false, genre: Genre.action,
   ),
   Movie(
     id: 'm26',
@@ -648,7 +648,7 @@ const dummyData = [
     isthriller: false,
     isfantasy: false,
     isbiography: false,
-    isdrama: true,
+    isdrama: true, genre: Genre.drama,
   ),
   Movie(
     id: 'm27',
@@ -678,7 +678,7 @@ const dummyData = [
     isthriller: false,
     isfantasy: false,
     isbiography: false,
-    isdrama: false,
+    isdrama: false, genre: Genre.action,
   ),
   Movie(
     id: 'm28',
@@ -710,7 +710,7 @@ const dummyData = [
     isthriller: false,
     isfantasy: false,
     isbiography: false,
-    isdrama: false,
+    isdrama: false, genre: Genre.action,
   ),
   Movie(
     id: 'm29',
@@ -772,7 +772,7 @@ const dummyData = [
     isthriller: false,
     isfantasy: false,
     isbiography: false,
-    isdrama: false,
+    isdrama: false, genre: Genre.action,
   ),
   Movie(
     id: 'm31',
@@ -802,7 +802,7 @@ const dummyData = [
     isthriller: false,
     isfantasy: false,
     isbiography: false,
-    isdrama: false,
+    isdrama: false, genre: Genre.animation,
   ),
   Movie(
     id: 'm32',
@@ -834,6 +834,7 @@ const dummyData = [
     isfantasy: false,
     isbiography: false,
     isdrama: false,
+    genre: Genre.action,
   ),
   Movie(
     id: 'm33',
@@ -864,6 +865,7 @@ const dummyData = [
     isfantasy: false,
     isbiography: false,
     isdrama: true,
+    genre: Genre.drama,
   ),
   Movie(
     id: 'm34',
@@ -894,6 +896,7 @@ const dummyData = [
     isfantasy: false,
     isbiography: false,
     isdrama: false,
+    genre: Genre.action,
   ),
   Movie(
     id: 'm35',
@@ -923,6 +926,7 @@ const dummyData = [
     isfantasy: false,
     isbiography: false,
     isdrama: false,
+    genre: Genre.action,
   ),
   Movie(
     id: 'm36',
@@ -950,7 +954,7 @@ const dummyData = [
     isthriller: true,
     isfantasy: false,
     isbiography: false,
-    isdrama: false,
+    isdrama: false, genre: Genre.action,
   ),
   Movie(
     id: 'm37',
@@ -979,6 +983,6 @@ const dummyData = [
     isthriller: false,
     isfantasy: false,
     isbiography: false,
-    isdrama: false,
+    isdrama: false, genre: Genre.adventure,
   ),
 ];
