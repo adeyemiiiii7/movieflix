@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:movieflix/providers/list_provider.dart';
 import 'package:movieflix/providers/movies_provider.dart';
 import 'package:movieflix/screens/filters.dart';
 import 'package:movieflix/screens/movie.dart';
@@ -124,8 +125,9 @@ class _TabsScreenState extends ConsumerState<TabsScreen> {
     Widget activePage = YearScreen(avaliableMovies: avaliableMovies);
     var activePageTitle = 'Years';
     if (_selectedPageIndex == 1) {
+      final listMovies = ref.watch(ListMoviesProvider);
       activePage = MovieScreen(
-        movies: _listMovies,
+        movies: listMovies,
       );
       activePageTitle = 'My List';
     }

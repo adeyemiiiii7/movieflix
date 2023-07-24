@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:movieflix/models/movie.dart';
 import 'package:movieflix/screens/start_screen.dart';
@@ -17,7 +18,11 @@ final theme = ThemeData(
     textTheme: GoogleFonts.poppinsTextTheme().apply(bodyColor: Colors.white));
 
 void main() {
-  runApp(const App());
+  runApp(
+    const ProviderScope(
+      child: App(),
+    ),
+  );
 }
 
 class App extends StatelessWidget {
@@ -33,8 +38,10 @@ class App extends StatelessWidget {
         Navigator.pop(
           context,
           MaterialPageRoute(
-            builder: (ctx) => YearScreen(
-              onPressList: (Movie movie) {},
+            builder: (ctx) => const YearScreen(
+              avaliableMovies: [],
+
+              // onPressList: (Movie movie) {},
             ),
           ),
         );

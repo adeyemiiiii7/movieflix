@@ -1,17 +1,17 @@
 import 'package:video_player/video_player.dart';
 
-// enum Genre {
-//   adventure,
-//   action,
-//   comedy,
-//   animation,
-//   horror,
-//   romance,
-//   thriller,
-//   drama,
-//   fantasy,
-//   biography
-// }
+enum Genre {
+  adventure,
+  action,
+  comedy,
+  animation,
+  horror,
+  romance,
+  thriller,
+  drama,
+  fantasy,
+  biography
+}
 
 enum Restriction {
   Guidance,
@@ -28,7 +28,7 @@ class Movie {
       required this.imageUrl,
       required this.duration,
       required this.restriction,
-      // required this.genre,
+      required this.genre,
       required this.isHollywood,
       required this.isNollywood,
       required this.isWorldwide,
@@ -53,7 +53,7 @@ class Movie {
   final String imageUrl;
   final int duration;
   final Restriction restriction;
-  //final Genre genre;
+  final Genre genre;
   final bool isHollywood;
   final bool isNollywood;
   final bool isWorldwide;

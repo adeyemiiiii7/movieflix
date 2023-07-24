@@ -4,10 +4,13 @@ import 'package:movieflix/models/movie.dart';
 import 'package:movieflix/providers/list_provider.dart';
 
 class MovieDetailsScreen extends ConsumerWidget {
-  const MovieDetailsScreen(
-      {super.key, required this.movie, required this.onPressList});
+  const MovieDetailsScreen({
+    super.key,
+    required this.movie,
+    //required this.onPressList
+  });
   final Movie movie;
-  final void Function(Movie movie) onPressList;
+  //final void Function(Movie movie) onPressList;
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     return Scaffold(
