@@ -1,17 +1,17 @@
 import 'package:video_player/video_player.dart';
 
-enum Genre {
-  adventure,
-  action,
-  comedy,
-  animation,
-  horror,
-  romance,
-  thriller,
-  drama,
-  fantasy,
-  biography
-}
+// enum Genre {
+//   adventure,
+//   action,
+//   comedy,
+//   animation,
+//   horror,
+//   romance,
+//   thriller,
+//   drama,
+//   fantasy,
+//   biography
+// }
 
 enum Restriction {
   Guidance,
@@ -21,22 +21,31 @@ enum Restriction {
 }
 
 class Movie {
-  const Movie({
-    required this.id,
-    required this.year,
-    required this.title,
-    required this.imageUrl,
-    required this.duration,
-    required this.restriction,
-    required this.genre,
-    required this.isHollywood,
-    required this.isNollywood,
-    required this.isWorldwide,
-    required this.about,
-    required this.rating,
-    required this.video,
-    required this.watch,
-  });
+  const Movie(
+      {required this.id,
+      required this.year,
+      required this.title,
+      required this.imageUrl,
+      required this.duration,
+      required this.restriction,
+      // required this.genre,
+      required this.isHollywood,
+      required this.isNollywood,
+      required this.isWorldwide,
+      required this.about,
+      required this.rating,
+      required this.video,
+      required this.watch,
+      required this.isadventure,
+      required this.isaction,
+      required this.iscomedy,
+      required this.isanimation,
+      required this.ishorror,
+      required this.isromance,
+      required this.isthriller,
+      required this.isdrama,
+      required this.isfantasy,
+      required this.isbiography});
 
   final String id;
   final List<String> year;
@@ -44,7 +53,7 @@ class Movie {
   final String imageUrl;
   final int duration;
   final Restriction restriction;
-  final Genre genre;
+  //final Genre genre;
   final bool isHollywood;
   final bool isNollywood;
   final bool isWorldwide;
@@ -52,6 +61,17 @@ class Movie {
   final int rating;
   final String video;
   final String watch;
+  final bool isdrama;
+  final bool isadventure;
+  final bool isaction;
+  final bool iscomedy;
+  final bool isanimation;
+  final bool ishorror;
+  final bool isromance;
+  final bool isthriller;
+  final bool isfantasy;
+  final bool isbiography;
+
   VideoPlayerController get videoController =>
       VideoPlayerController.networkUrl(video as Uri);
 }
