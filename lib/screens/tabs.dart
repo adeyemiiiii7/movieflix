@@ -32,7 +32,7 @@ class _TabsScreenState extends ConsumerState<TabsScreen> {
   int _selectedPageIndex = 0;
   Map<Filter, bool> _selectedFilters = kIntialFilters;
   final List<Movie> _listMovies = [];
-  
+
   // void _showInfoMessage(String message) {
   //   ScaffoldMessenger.of(context).clearSnackBars();
   //   ScaffoldMessenger.maybeOf(context)
@@ -65,74 +65,68 @@ class _TabsScreenState extends ConsumerState<TabsScreen> {
   void _setScreen(String identifier) async {
     Navigator.of(context).pop();
     if (identifier == 'filters') {
-     final result =  await Navigator.of(context).push<Map<Filter, bool>>(
+      final result = await Navigator.of(context).push<Map<Filter, bool>>(
         MaterialPageRoute(
           builder: (ctx) => FiltersScreen(
             currentFilters: _selectedFilters,
           ),
         ),
       );
-    
-  
 
-   setState(() {
+      setState(() {
         _selectedFilters = result ?? kIntialFilters;
       });
     }
-}
+  }
 
   @override
   Widget build(BuildContext context) {
-final movies = ref.watch(moviesProvider);
-final avaliableMovies = movies.where((movies){
-  if (_selectedFilters[Filter.adventure]! && !Genre.adventure) {
-  return false;
-}
+    final movies = ref.watch(moviesProvider);
+    final avaliableMovies = movies.where((movies) {
+      if (_selectedFilters[Filter.adventure]! && !movies.isadventure) {
+        return false;
+      }
 
-if (_selectedFilters[Filter.action]! && !movies.isAction) {
-  return false;
-}
+      if (_selectedFilters[Filter.action]! && !movies.isaction) {
+        return false;
+      }
 
-if (_selectedFilters[Filter.comedy]! && !movies.isComedy) {
-  return false;
-}
+      if (_selectedFilters[Filter.comedy]! && !movies.iscomedy) {
+        return false;
+      }
 
-if (_selectedFilters[Filter.animation]! && !movies.isAnimation) {
-  return false;
-}
+      if (_selectedFilters[Filter.animation]! && !movies.isanimation) {
+        return false;
+      }
 
-if (_selectedFilters[Filter.horror]! && !movies.isHorror) {
-  return false;
-}
+      if (_selectedFilters[Filter.horror]! && !movies.ishorror) {
+        return false;
+      }
 
-if (_selectedFilters[Filter.thriller]! && !movies.isThriller) {
-  return false;
-}
+      if (_selectedFilters[Filter.thriller]! && !movies.isthriller) {
+        return false;
+      }
 
-if (_selectedFilters[Filter.drama]! && !movies.isDrama) {
-  return false;
-}
+      if (_selectedFilters[Filter.drama]! && !movies.isdrama) {
+        return false;
+      }
 
-if (_selectedFilters[Filter.fantasy]! && !movies.isFantasy) {
-  return false;
-}
+      if (_selectedFilters[Filter.fantasy]! && !movies.isfantasy) {
+        return false;
+      }
 
-if (_selectedFilters[Filter.biography]! && !movies.isBiography) {
-  return false;
-}
-return true;
+      if (_selectedFilters[Filter.biography]! && !movies.isbiography) {
+        return false;
+      }
+      return true;
+    }).toList();
 
-}).toList();
-
-  
-  
-  
-  
-    Widget activePage = YearScreen(onPressList: );
+    Widget activePage = YearScreen(avaliableMovies: avaliableMovies);
     var activePageTitle = 'Years';
     if (_selectedPageIndex == 1) {
       activePage = MovieScreen(
-          movies: _listMovies, onPressList: _onPressMovieListStatus);
+        movies: _listMovies,
+      );
       activePageTitle = 'My List';
     }
     return Scaffold(
