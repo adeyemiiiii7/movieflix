@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:movieflix/models/movie.dart';
 import 'package:movieflix/providers/list_provider.dart';
+import 'package:video_player/video_player.dart';
 
 class MovieDetailsScreen extends ConsumerWidget {
   const MovieDetailsScreen({
@@ -46,6 +47,10 @@ class MovieDetailsScreen extends ConsumerWidget {
                 fit: BoxFit.contain,
               ),
             ),
+            AspectRatio(
+              aspectRatio: 16 / 9,
+              child: VideoPlayer(movie.videoController),
+            ),
             const SizedBox(height: 16),
             Text(
               'Genre: ${movie.genre.name}',
@@ -84,6 +89,17 @@ class MovieDetailsScreen extends ConsumerWidget {
             const SizedBox(height: 8),
             Text(
               movie.about,
+              style: Theme.of(context).textTheme.bodyLarge,
+            ),
+            const SizedBox(height: 8),
+            Text(
+              'Where to Watch: ',
+              style: Theme.of(context).textTheme.titleLarge!.copyWith(
+                    fontWeight: FontWeight.bold,
+                  ),
+            ),
+            Text(
+              movie.watch,
               style: Theme.of(context).textTheme.bodyLarge,
             ),
           ],

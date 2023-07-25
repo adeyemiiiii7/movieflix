@@ -59,7 +59,7 @@ class Movie {
   final bool isWorldwide;
   final String about;
   final int rating;
-  final String video;
+  final Uri video;
   final String watch;
   final bool isdrama;
   final bool isadventure;
@@ -72,6 +72,7 @@ class Movie {
   final bool isfantasy;
   final bool isbiography;
 
+  // Update the videoController property to return VideoPlayerController.
   VideoPlayerController get videoController =>
-      VideoPlayerController.networkUrl(video as Uri);
+      VideoPlayerController.networkUrl(video);
 }
