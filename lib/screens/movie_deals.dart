@@ -47,10 +47,7 @@ class MovieDetailsScreen extends ConsumerWidget {
                 fit: BoxFit.contain,
               ),
             ),
-            AspectRatio(
-              aspectRatio: 16 / 9,
-              child: VideoPlayer(movie.videoController),
-            ),
+            //VideoPlayer(movie.videoController),
             const SizedBox(height: 16),
             Text(
               'Genre: ${movie.genre.name}',
@@ -94,7 +91,7 @@ class MovieDetailsScreen extends ConsumerWidget {
             const SizedBox(height: 8),
             Text(
               'Where to Watch: ',
-              style: Theme.of(context).textTheme.titleLarge!.copyWith(
+              style: Theme.of(context).textTheme.titleMedium!.copyWith(
                     fontWeight: FontWeight.bold,
                   ),
             ),

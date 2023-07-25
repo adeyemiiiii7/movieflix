@@ -75,4 +75,5 @@ class Movie {
   // Update the videoController property to return VideoPlayerController.
   VideoPlayerController get videoController =>
       VideoPlayerController.networkUrl(video);
+  // VideoPlayerController videoController = VideoPlayerController.networkUrl(video);
 }

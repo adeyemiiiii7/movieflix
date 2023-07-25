@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:movieflix/models/movie.dart';
+import 'package:movieflix/providers/Filter_provider.dart';
 import 'package:movieflix/screens/tabs.dart';
 import 'package:movieflix/screens/years.dart';
 
-class StartScreen extends StatelessWidget {
+class StartScreen extends ConsumerWidget {
   const StartScreen({
     super.key,
     required this.onContinue,
@@ -12,7 +14,8 @@ class StartScreen extends StatelessWidget {
   //final void Function(Movie movie) onPressList;
   final VoidCallback onContinue;
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context, WidgetRef ref) {
+    final avaliableMovies = ref.watch(filteredMoviesProvider);
     return Scaffold(
       backgroundColor: const Color.fromARGB(103, 87, 72, 72),
       body: SafeArea(
@@ -46,7 +49,6 @@ class StartScreen extends StatelessWidget {
                       builder: (ctx) => const TabsScreen(
                           //   onPressList: onPressList,
                           ),
-                      //avaliableMovies: [],
                     ),
                   );
                 },

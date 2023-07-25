@@ -3,18 +3,14 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:movieflix/providers/Filter_provider.dart';
 import 'package:movieflix/models/movie.dart';
 
-class FiltersScreen extends ConsumerStatefulWidget {
+class FiltersScreen extends ConsumerWidget {
   const FiltersScreen({
     super.key,
     //required this.currentFilters
   });
 
   //final Map<Filter, bool> currentFilters;
-  @override
-  ConsumerState<FiltersScreen> createState() => _FiltersScreenState();
-}
 
-class _FiltersScreenState extends ConsumerState<FiltersScreen> {
   // var _adventureMovies = false;
   // var _actionMovies = false;
   // var _comedyMovies = false;
@@ -42,7 +38,7 @@ class _FiltersScreenState extends ConsumerState<FiltersScreen> {
   // }
 
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context, WidgetRef ref) {
     final activeFilters = ref.watch(filtersProvider);
     return Scaffold(
       appBar: AppBar(

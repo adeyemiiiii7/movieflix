@@ -18,7 +18,7 @@ class _MoviePlayerState extends State<MoviePlayer> {
   @override
   void initState() {
     super.initState();
-    _controller = widget.movie.videoController;
+    _controller = VideoPlayerController.networkUrl(widget.movie.video);
     _controller.initialize().then((_) {
       setState(() {});
     });
