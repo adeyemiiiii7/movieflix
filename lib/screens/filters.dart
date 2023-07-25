@@ -102,9 +102,8 @@ class _FiltersScreenState extends ConsumerState<FiltersScreen> {
           SwitchListTile(
             value:activeFilters[Filter.iscomedy]!,
             onChanged: (isChecked) {
-              setState(() {
-                _comedyMovies = isChecked;
-              });
+              .read(filtersProvider.notifier)
+             .setFilter(Filter.iscomedy, isChecked);
             },
             title: Text(
               'Comedy-Movies',
@@ -116,11 +115,9 @@ class _FiltersScreenState extends ConsumerState<FiltersScreen> {
             contentPadding: const EdgeInsets.only(left: 34, right: 22),
           ),
           SwitchListTile(
-            value: _animationMovies,
+          value:activeFilters[Filter.iscomedy]!,
             onChanged: (isChecked) {
-              setState(() {
-                _animationMovies = isChecked;
-              });
+              
             },
             title: Text(
               'Animation-Movies',
