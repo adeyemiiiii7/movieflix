@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:movieflix/providers/Filter_provider.dart';
 import 'package:movieflix/providers/list_provider.dart';
 import 'package:movieflix/providers/movies_provider.dart';
 import 'package:movieflix/screens/filters.dart';
@@ -10,16 +11,16 @@ import 'package:movieflix/widgets/main_drawer.dart';
 import '../models/movie.dart';
 
 const kIntialFilters = {
-  Filter.adventure: false,
-  Filter.action: false,
-  Filter.comedy: false,
-  Filter.animation: false,
-  Filter.horror: false,
-  Filter.romance: false,
-  Filter.thriller: false,
-  Filter.drama: false,
-  Filter.fantasy: false,
-  Filter.biography: false,
+  Filter.isadventure: false,
+  Filter.isaction: false,
+  Filter.iscomedy: false,
+  Filter.isanimation: false,
+  Filter.ishorror: false,
+  Filter.isromance: false,
+  Filter.isthriller: false,
+  Filter.isdrama: false,
+  Filter.isfantasy: false,
+  Filter.isbiography: false,
 };
 
 class TabsScreen extends ConsumerStatefulWidget {
@@ -84,39 +85,39 @@ class _TabsScreenState extends ConsumerState<TabsScreen> {
   Widget build(BuildContext context) {
     final movies = ref.watch(moviesProvider);
     final avaliableMovies = movies.where((movies) {
-      if (_selectedFilters[Filter.adventure]! && !movies.isadventure) {
+      if (_selectedFilters[Filter.isadventure]! && !movies.isadventure) {
         return false;
       }
 
-      if (_selectedFilters[Filter.action]! && !movies.isaction) {
+      if (_selectedFilters[Filter.isaction]! && !movies.isaction) {
         return false;
       }
 
-      if (_selectedFilters[Filter.comedy]! && !movies.iscomedy) {
+      if (_selectedFilters[Filter.iscomedy]! && !movies.iscomedy) {
         return false;
       }
 
-      if (_selectedFilters[Filter.animation]! && !movies.isanimation) {
+      if (_selectedFilters[Filter.isanimation]! && !movies.isanimation) {
         return false;
       }
 
-      if (_selectedFilters[Filter.horror]! && !movies.ishorror) {
+      if (_selectedFilters[Filter.ishorror]! && !movies.ishorror) {
         return false;
       }
 
-      if (_selectedFilters[Filter.thriller]! && !movies.isthriller) {
+      if (_selectedFilters[Filter.isthriller]! && !movies.isthriller) {
         return false;
       }
 
-      if (_selectedFilters[Filter.drama]! && !movies.isdrama) {
+      if (_selectedFilters[Filter.isdrama]! && !movies.isdrama) {
         return false;
       }
 
-      if (_selectedFilters[Filter.fantasy]! && !movies.isfantasy) {
+      if (_selectedFilters[Filter.isfantasy]! && !movies.isfantasy) {
         return false;
       }
 
-      if (_selectedFilters[Filter.biography]! && !movies.isbiography) {
+      if (_selectedFilters[Filter.isbiography]! && !movies.isbiography) {
         return false;
       }
       return true;

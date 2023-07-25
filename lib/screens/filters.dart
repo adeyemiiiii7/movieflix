@@ -1,18 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-
-enum Filter {
-  adventure,
-  action,
-  comedy,
-  animation,
-  horror,
-  romance,
-  thriller,
-  drama,
-  fantasy,
-  biography
-}
+import 'package:movieflix/providers/Filter_provider.dart';
+import 'package:movieflix/models/movie.dart';
 
 class FiltersScreen extends ConsumerStatefulWidget {
   const FiltersScreen({super.key, required this.currentFilters});
@@ -28,24 +17,25 @@ class _FiltersScreenState extends ConsumerState<FiltersScreen> {
   var _comedyMovies = false;
   var _animationMovies = false;
   var _horrorMovies = false;
-  // var _romanceMovies = false;
+  var _romanceMovies = false;
   var _thrillerMovies = false;
   var _dramaMovies = false;
   var _fantasyMovies = false;
   var _biographyMovies = false;
   @override
-  void initstate() {
+  void initState() {
     super.initState();
-    _adventureMovies = widget.currentFilters[Filter.adventure]!;
-    _actionMovies = widget.currentFilters[Filter.action]!;
-    _comedyMovies = widget.currentFilters[Filter.comedy]!;
-    _animationMovies = widget.currentFilters[Filter.animation]!;
-    _horrorMovies = widget.currentFilters[Filter.horror]!;
-    //_romanceMovies = widget.currentFilters[Filter.romance]!;
-    _thrillerMovies = widget.currentFilters[Filter.thriller]!;
-    _dramaMovies = widget.currentFilters[Filter.drama]!;
-    _fantasyMovies = widget.currentFilters[Filter.fantasy]!;
-    _biographyMovies = widget.currentFilters[Filter.biography]!;
+    final activeFilters = ref.read(filtersProvider);
+    _adventureMovies = activeFilters[Filter.isadventure]!;
+    _actionMovies = activeFilters[Filter.isaction]!;
+    _comedyMovies = activeFilters[Filter.iscomedy]!;
+    _animationMovies = activeFilters[Filter.isanimation]!;
+    _horrorMovies = activeFilters[Filter.ishorror]!;
+    _romanceMovies = activeFilters[Filter.isromance]!;
+    _thrillerMovies = activeFilters[Filter.isthriller]!;
+    _dramaMovies = activeFilters[Filter.isdrama]!;
+    _fantasyMovies = activeFilters[Filter.isfantasy]!;
+    _biographyMovies = activeFilters[Filter.isbiography]!;
   }
 
   @override
@@ -56,19 +46,20 @@ class _FiltersScreenState extends ConsumerState<FiltersScreen> {
       ),
       body: WillPopScope(
         onWillPop: () async {
-          Navigator.of(context).pop({
-            Filter.adventure: _adventureMovies,
-            Filter.action: _adventureMovies,
-            Filter.comedy: _comedyMovies,
-            Filter.animation: _animationMovies,
-            Filter.horror: _horrorMovies,
-            // Filter.romance: _r,
-            Filter.thriller: _thrillerMovies,
-            Filter.drama: _dramaMovies,
-            Filter.fantasy: _fantasyMovies,
-            Filter.biography: _biographyMovies,
+          ref.read(filtersProvider.notifier).setFilters({
+            Filter.isadventure: _adventureMovies,
+            Filter.isaction: _actionMovies,
+            Filter.iscomedy: _comedyMovies,
+            Filter.isanimation: _animationMovies,
+            Filter.ishorror: _horrorMovies,
+            Filter.isromance: _romanceMovies,
+            Filter.isthriller: _thrillerMovies,
+            Filter.isdrama: _dramaMovies,
+            Filter.isfantasy: _fantasyMovies,
+            Filter.isbiography: _biographyMovies,
           });
-          return false;
+          // Navigator.of(context).pop();
+          return true;
         },
         child: Column(children: [
           SwitchListTile(
