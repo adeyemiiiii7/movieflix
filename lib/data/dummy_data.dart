@@ -97,7 +97,7 @@ const dummyData = [
     isadventure: false,
     isaction: true,
     iscomedy: false,
-    isanimation: false,
+    isanimation: true,
     ishorror: false,
     isromance: false,
     isthriller: false,

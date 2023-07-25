@@ -4,66 +4,71 @@ import 'package:movieflix/providers/Filter_provider.dart';
 import 'package:movieflix/models/movie.dart';
 
 class FiltersScreen extends ConsumerStatefulWidget {
-  const FiltersScreen({super.key, required this.currentFilters});
+  const FiltersScreen({
+    super.key,
+    //required this.currentFilters
+  });
 
-  final Map<Filter, bool> currentFilters;
+  //final Map<Filter, bool> currentFilters;
   @override
   ConsumerState<FiltersScreen> createState() => _FiltersScreenState();
 }
 
 class _FiltersScreenState extends ConsumerState<FiltersScreen> {
-  var _adventureMovies = false;
-  var _actionMovies = false;
-  var _comedyMovies = false;
-  var _animationMovies = false;
-  var _horrorMovies = false;
-  var _romanceMovies = false;
-  var _thrillerMovies = false;
-  var _dramaMovies = false;
-  var _fantasyMovies = false;
-  var _biographyMovies = false;
-  @override
-  void initState() {
-    super.initState();
-    final activeFilters = ref.read(filtersProvider);
-    _adventureMovies = activeFilters[Filter.isadventure]!;
-    _actionMovies = activeFilters[Filter.isaction]!;
-    _comedyMovies = activeFilters[Filter.iscomedy]!;
-    _animationMovies = activeFilters[Filter.isanimation]!;
-    _horrorMovies = activeFilters[Filter.ishorror]!;
-    _romanceMovies = activeFilters[Filter.isromance]!;
-    _thrillerMovies = activeFilters[Filter.isthriller]!;
-    _dramaMovies = activeFilters[Filter.isdrama]!;
-    _fantasyMovies = activeFilters[Filter.isfantasy]!;
-    _biographyMovies = activeFilters[Filter.isbiography]!;
-  }
+  // var _adventureMovies = false;
+  // var _actionMovies = false;
+  // var _comedyMovies = false;
+  // var _animationMovies = false;
+  // var _horrorMovies = false;
+  // var _romanceMovies = false;
+  // var _thrillerMovies = false;
+  // var _dramaMovies = false;
+  // var _fantasyMovies = false;
+  // var _biographyMovies = false;
+  // @override
+  // void initState() {
+  //   super.initState();
+  //   final activeFilters = ref.read(filtersProvider);
+  //   _adventureMovies = activeFilters[Filter.isadventure]!;
+  //   _actionMovies = activeFilters[Filter.isaction]!;
+  //   _comedyMovies = activeFilters[Filter.iscomedy]!;
+  //   _animationMovies = activeFilters[Filter.isanimation]!;
+  //   _horrorMovies = activeFilters[Filter.ishorror]!;
+  //   _romanceMovies = activeFilters[Filter.isromance]!;
+  //   _thrillerMovies = activeFilters[Filter.isthriller]!;
+  //   _dramaMovies = activeFilters[Filter.isdrama]!;
+  //   _fantasyMovies = activeFilters[Filter.isfantasy]!;
+  //   _biographyMovies = activeFilters[Filter.isbiography]!;
+  // }
 
   @override
   Widget build(BuildContext context) {
+     final activeFilters = ref.watch(filtersProvider);
     return Scaffold(
       appBar: AppBar(
         title: const Text('Filters...'),
       ),
-      body: WillPopScope(
-        onWillPop: () async {
-          ref.read(filtersProvider.notifier).setFilters({
-            Filter.isadventure: _adventureMovies,
-            Filter.isaction: _actionMovies,
-            Filter.iscomedy: _comedyMovies,
-            Filter.isanimation: _animationMovies,
-            Filter.ishorror: _horrorMovies,
-            Filter.isromance: _romanceMovies,
-            Filter.isthriller: _thrillerMovies,
-            Filter.isdrama: _dramaMovies,
-            Filter.isfantasy: _fantasyMovies,
-            Filter.isbiography: _biographyMovies,
-          });
-          // Navigator.of(context).pop();
-          return true;
-        },
-        child: Column(children: [
+      body:
+      // WillPopScope(
+      //   onWillPop: () async {
+      //     ref.read(filtersProvider.notifier).setFilters({
+      //       Filter.isadventure: _adventureMovies,
+      //       Filter.isaction: _actionMovies,
+      //       Filter.iscomedy: _comedyMovies,
+      //       Filter.isanimation: _animationMovies,
+      //       Filter.ishorror: _horrorMovies,
+      //       Filter.isromance: _romanceMovies,
+      //       Filter.isthriller: _thrillerMovies,
+      //       Filter.isdrama: _dramaMovies,
+      //       Filter.isfantasy: _fantasyMovies,
+      //       Filter.isbiography: _biographyMovies,
+      //     });
+      //     // Navigator.of(context).pop();
+      //     return true;
+      //   },
+         Column(children: [
           SwitchListTile(
-            value: _adventureMovies,
+            value: activeFilters[Filter.isadventure]!,
             onChanged: (isChecked) {
               setState(() {
                 _adventureMovies = isChecked;

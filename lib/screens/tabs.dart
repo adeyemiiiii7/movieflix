@@ -69,9 +69,9 @@ class _TabsScreenState extends ConsumerState<TabsScreen> {
     if (identifier == 'filters') {
       final result = await Navigator.of(context).push<Map<Filter, bool>>(
         MaterialPageRoute(
-          builder: (ctx) => FiltersScreen(
-            currentFilters: _selectedFilters,
-          ),
+          builder: (ctx) => const FiltersScreen(
+              // currentFilters: _selectedFilters,
+              ),
         ),
       );
 
@@ -84,40 +84,41 @@ class _TabsScreenState extends ConsumerState<TabsScreen> {
   @override
   Widget build(BuildContext context) {
     final movies = ref.watch(moviesProvider);
-    final avaliableMovies = movies.where((movies) {
-      if (_selectedFilters[Filter.isadventure]! && !movies.isadventure) {
+    final activeFilters = ref.watch(filtersProvider);
+    final avaliableMovies = movies.where((movie) {
+      if (activeFilters[Filter.isadventure]! && !movie.isadventure) {
         return false;
       }
 
-      if (_selectedFilters[Filter.isaction]! && !movies.isaction) {
+      if (activeFilters[Filter.isaction]! && !movie.isaction) {
         return false;
       }
 
-      if (_selectedFilters[Filter.iscomedy]! && !movies.iscomedy) {
+      if (activeFilters[Filter.iscomedy]! && !movie.iscomedy) {
         return false;
       }
 
-      if (_selectedFilters[Filter.isanimation]! && !movies.isanimation) {
+      if (activeFilters[Filter.isanimation]! && !movie.isanimation) {
         return false;
       }
 
-      if (_selectedFilters[Filter.ishorror]! && !movies.ishorror) {
+      if (activeFilters[Filter.ishorror]! && !movie.ishorror) {
         return false;
       }
 
-      if (_selectedFilters[Filter.isthriller]! && !movies.isthriller) {
+      if (activeFilters[Filter.isthriller]! && !movie.isthriller) {
         return false;
       }
 
-      if (_selectedFilters[Filter.isdrama]! && !movies.isdrama) {
+      if (activeFilters[Filter.isdrama]! && !movie.isdrama) {
         return false;
       }
 
-      if (_selectedFilters[Filter.isfantasy]! && !movies.isfantasy) {
+      if (activeFilters[Filter.isfantasy]! && !movie.isfantasy) {
         return false;
       }
 
-      if (_selectedFilters[Filter.isbiography]! && !movies.isbiography) {
+      if (activeFilters[Filter.isbiography]! && !movie.isbiography) {
         return false;
       }
       return true;
